@@ -1,0 +1,5 @@
+@import '@/styles/typography';
+
+.body {
+  @include typography(1.5, 400);
+}

@@ -1,0 +1,21 @@
+@import '@/styles/typography';
+
+.h1 {
+  @include typography(3.375rem);
+  font-size: 2.5rem;
+}
+
+.h2 {
+  @include typography(2.75rem);
+  font-size: 2rem;
+}
+
+.h3 {
+  @include typography(2.375rem);
+  font-size: 1.75rem;
+}
+
+.h4 {
+  @include typography(2rem);
+  font-size: 1.5rem;
+}

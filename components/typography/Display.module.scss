@@ -1,0 +1,11 @@
+@import '@/styles/typography';
+
+.strong {
+  @include typography(4.840625rem);
+  font-size: 4rem;
+}
+
+.light {
+  @include typography(4.235625rem, 400);
+  font-size: 3.5rem;
+}

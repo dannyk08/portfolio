@@ -1,0 +1,45 @@
+@import './colors';
+
+
+:root {
+  --font-size: 16px;
+  --foreground-hex: $raisin-black;
+  --background-hex: $white-smoke;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-hex: $white-smoke;
+    --background-hex: $raisin-black;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: var(--font-size);
+}
+
+body {
+  color: rgb(var(--foreground-hex));
+  background: rgb(var(--background-hex)) no-repeat cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --font-size: 18px
+  }
+}
