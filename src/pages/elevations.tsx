@@ -1,4 +1,5 @@
 import BaseElevation from 'components/elevations/Base'
+import Container from 'components/layouts/Container'
 import Cap from 'components/typography/Cap'
 import Heading from 'components/typography/Heading'
 import P from 'components/typography/P'
@@ -11,7 +12,7 @@ export default function Elevations() {
       <Head>
         <title>Danny's IO | Elevations</title>
       </Head>
-      <div className={styles.main}>
+      <Container className={styles.main}>
         <Heading size="h2">Elevations</Heading>
 
         <BaseElevation>
@@ -95,7 +96,7 @@ export default function Elevations() {
           </div>
         </BaseElevation>
 
-      </div>
+      </Container>
     </>
   )
 }

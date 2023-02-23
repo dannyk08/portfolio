@@ -1,8 +1,10 @@
-import { Inter } from '@next/font/google'
+import { Poppins } from '@next/font/google'
 import { Props } from 'next/script'
 import styles from './Display.module.scss'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Poppins({
+  weight: '700',
+})
 
 type DisplayProps = Props & {
   weight?: 'strong' | 'light',

@@ -4,6 +4,7 @@ import Display from 'components/typography/Display'
 import P from 'components/typography/P'
 import styles from './typography.module.scss'
 import Cap from 'components/typography/Cap'
+import Container from 'components/layouts/Container'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Head>
         <title>Danny's IO | Typography</title>
       </Head>
-      <div className={styles.main}>
+      <Container className={styles.main}>
         <div className={styles.row}>
           <div className={styles.cap}>
             <Cap>Display</Cap>
@@ -56,7 +57,7 @@ export default function Home() {
             <Cap>Mellifluous</Cap>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   )
 }

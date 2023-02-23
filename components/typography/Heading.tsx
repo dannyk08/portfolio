@@ -1,8 +1,10 @@
-import { Inter } from '@next/font/google'
+import { Poppins } from '@next/font/google'
 import { Props } from 'next/script';
 import styles from './Heading.module.scss'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Poppins({
+  weight: '700',
+})
 
 const H1 = (props: Props) => <h1 {...props}>{props.children}</h1>
 const H2 = (props: Props) => <h2 {...props}>{props.children}</h2>
@@ -23,12 +25,12 @@ type HeadingProps = Props & {
 }
 
 export default function Heading(props: HeadingProps) {
-  const { children, size = 'h1', ...rest } = props || {}
+  const { children, className, size = 'h1', ...rest } = props || {}
   const headingClass = styles[size]
 
   const Component = headingComponents.get(size)
 
-  return <Component className={[inter.className, headingClass].join(' ')} {...rest}>
+  return <Component className={[className, inter.className, headingClass].join(' ')} {...rest}>
     {children}
   </Component>
 }

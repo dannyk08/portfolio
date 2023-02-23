@@ -1,5 +1,40 @@
 .main {
-  padding: 2rem 1rem;
   min-height: 100vh;
   width: 100vw;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnailUserInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnailImage {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.thumbnailCta {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.thumbnailIcons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  border-top: 2px var(--foreground-hex) solid;
+  padding-top: 1.5rem;
 }

@@ -8,6 +8,7 @@
   border: none;
   cursor: pointer;
   transition: box-shadow .125s ease-out;
+  margin: 0;
 
   &:hover {
     box-shadow: $elevation-2;
