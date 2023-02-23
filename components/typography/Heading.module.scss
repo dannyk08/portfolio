@@ -3,6 +3,7 @@
 .h1 {
   @include typography(3.375rem);
   font-size: 2.5rem;
+  margin-bottom: 0.875rem;
 }
 
 .h2 {
@@ -18,4 +19,9 @@
 .h4 {
   @include typography(2rem);
   font-size: 1.5rem;
+}
+
+.h5 {
+  @include typography(1.75rem);
+  font-size: 1.25rem;
 }

@@ -3,3 +3,18 @@ $picton-blue: #0fabf6ff;
 $amaranth: #e62d5aff;
 $raisin-black: #1c1e2dff;
 $white-smoke: #f5f5f5ff;
+
+$raisin-black-01: darken($raisin-black, 6.25%);
+$raisin-black-02: darken($raisin-black, 12.5%);
+$raisin-black-03: darken($raisin-black, 18.75%);
+
+$white-smoke-01: darken($white-smoke, 6.25%);
+$white-smoke-02: darken($white-smoke, 12.5%);
+$white-smoke-03: darken($white-smoke, 18.75%);
+
+
+$box-shadow-light: transparentize($white-smoke-03, 0.04);
+$box-shadow-light-2: transparentize($white-smoke-03, 0.16);
+
+$box-shadow-dark: transparentize($raisin-black-03, 0.04);
+$box-shadow-dark-2: transparentize($raisin-black-03, 0.32);

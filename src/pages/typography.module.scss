@@ -1,0 +1,19 @@
+.main {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.cap {
+  width: 25%;
+  min-width: 9rem;
+}
+
+.content {
+  flex: 1;
+}
