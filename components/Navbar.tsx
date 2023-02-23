@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Props } from 'next/script';
 import BaseElevation from './elevations/Base';
 import Menu from './icons/Menu';
-import styles from './Navbar.module.scss'
 import { useState } from 'react';
 import windowSize from 'effects/windowSize';
 import SubNavList from './SubNavbar';
 import Modal from './Modal';
+import styles from './Navbar.module.scss'
 
 export default function Navbar() {
   const [menuActive, setMenuActive] = useState(false)

@@ -9,7 +9,7 @@ export default function BaseElevation(props: BaseElevationProps) {
   const { children, className, elevation = 0, ...rest } = props
   const elevationClass = `elevation-${elevation}`
 
-  return <div className={[className, styles[elevationClass]].join(' ')} {...rest}>
+  return <div className={[styles[elevationClass], className].join(' ')} {...rest}>
     {children}
   </div>
 }

@@ -4,7 +4,7 @@ import styles from './Base.module.scss'
 export default function BaseButton(props: Props) {
   const { children, className, ...rest } = props
 
-  return <button {...rest} className={[className, styles.button].join(' ')} >
+  return <button {...rest} className={[styles.button, className].join(' ')} >
     {children}
   </button>
 }

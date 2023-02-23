@@ -1,4 +1,6 @@
+@import '@/styles/layout';
+
 .container {
   padding: 1rem;
-  max-width: var(--desktop-breakpoint)px;
+  max-width: $desktop-breakpoint-px;
 }

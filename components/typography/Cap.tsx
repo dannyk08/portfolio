@@ -3,7 +3,7 @@ import { Props } from 'next/script'
 import styles from './Cap.module.scss'
 
 const inter = Poppins({
-  weight: '400',
+  weight: '300',
 })
 
 export default function Cap(props: Props) {

@@ -2,3 +2,7 @@
 $mobile-breakpoint: 480;
 $tablet-breakpoint: 768;
 $desktop-breakpoint: 1025;
+
+$mobile-breakpoint-px: #{$mobile-breakpoint}px;
+$tablet-breakpoint-px: #{$tablet-breakpoint}px;
+$desktop-breakpoint-px: #{$desktop-breakpoint}px;

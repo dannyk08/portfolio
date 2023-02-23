@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Props } from 'next/script';
-import styles from './SubNavbar.module.scss'
 import Cap from './typography/Cap';
+import styles from './SubNavbar.module.scss'
 
 export default function SubNavList(props: Props) {
   return <div className={styles.subNavbar}>

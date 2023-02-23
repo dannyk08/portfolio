@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Heading from 'components/typography/Heading'
 import Display from 'components/typography/Display'
 import P from 'components/typography/P'
-import styles from './typography.module.scss'
 import Cap from 'components/typography/Cap'
 import Container from 'components/layouts/Container'
+import styles from './typography.module.scss'
 
 export default function Home() {
   return (

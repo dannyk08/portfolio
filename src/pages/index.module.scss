@@ -1,18 +1,42 @@
+@import '@/styles/layout';
+
 .main {
-  min-height: 100vh;
+  display: flex;
   width: 100vw;
+  justify-content: center;
+  align-items: center;
+  max-height: $desktop-breakpoint-px;
+}
+
+.mainContent {
+  @media (min-width: $tablet-breakpoint-px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .thumbnail {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
+
+  @media (min-width: $tablet-breakpoint-px) {
+    min-width: 22.5rem;
+  }
 }
 
 .thumbnailUserInfo {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+
+  @media (min-width: $tablet-breakpoint-px) {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .thumbnailImage {
@@ -25,16 +49,21 @@
 .thumbnailCta {
   display: flex;
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .thumbnailIcons {
+  background-color: white;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin-top: 1rem;
-  border-top: 2px var(--foreground-hex) solid;
-  padding-top: 1.5rem;
+  height: 4rem;
+  align-items: center;
+}
+
+.profileDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
