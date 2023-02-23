@@ -1,0 +1,24 @@
+@import '@/styles/elevation';
+
+.button {
+  @include elevation;
+
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow .125s ease-out;
+
+  &:hover {
+    box-shadow: $elevation-2;
+    transition: box-shadow .25s ease-in;
+  }
+
+  &:active {
+    box-shadow: $elevation-2;
+  }
+
+  &:focus {
+    box-shadow: $elevation-2;
+  }
+}

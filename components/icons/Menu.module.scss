@@ -1,0 +1,36 @@
+.menuButton {
+  position: relative;
+  z-index: 10;
+}
+
+.menuSVG1,
+.menuSVG2,
+.menuSVG3 {
+  fill: var(--foreground-hex);
+  transition: transform 0.5s ease-out, fill 0.5s ease-out;
+}
+
+.menuSVG1 {
+  transform-origin: 13% 25%;
+}
+
+.activeSVG1 {
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in, fill 0.5s ease-in;
+  fill: var(--primary-color);
+}
+
+.menuSVG2 {
+  transform-origin: 35% 50%;
+}
+
+.activeSVG2 {
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease-in, fill 0.5s ease-in;
+  fill: var(--secondary-color);
+}
+
+.activeSVG3 {
+  transition: fill 0.5s ease-in;
+  fill: var(--tertiary-color);
+}

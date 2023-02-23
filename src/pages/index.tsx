@@ -10,12 +10,12 @@ export default function Home() {
         <title>Danny's IO | Developer Portfolio</title>
         <meta name="description" content="Web Developer Portfolio made by Daniel (Danny) Romero." />
       </Head>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <div className={styles.row}>
           <Heading>Home page</Heading>
           <P>Hello World?</P>
         </div>
-      </main>
+      </div>
     </>
   )
 }

@@ -1,0 +1,13 @@
+@mixin elevation() {
+  background-color: var(--background-hex);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: .5rem;
+}
+
+$elevation-1: 0px 0px 1px var(--box-shadow-1), 0px 0.5px 2px var(--box-shadow-2);
+$elevation-2: 0px 0px 1px var(--box-shadow-1), 0px 2px 4px var(--box-shadow-2);
+$elevation-3: 0px 0px 2px var(--box-shadow-1), 0px 4px 8px var(--box-shadow-2);
+$elevation-4: 0px 2px 4px var(--box-shadow-1), 0px 8px 16px var(--box-shadow-2);
+$elevation-5: 0px 2px 8px var(--box-shadow-1), 0px 16px 24px var(--box-shadow-2);
+$elevation-6: 0px 2px 8px var(--box-shadow-1), 0px 16px 24px var(--box-shadow-2);

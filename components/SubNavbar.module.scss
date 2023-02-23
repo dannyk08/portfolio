@@ -1,0 +1,27 @@
+@import '@/styles/layout';
+
+.subNavbar {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: #{$mobile-breakpoint}px) {
+    justify-content: flex-end;
+  }
+}
+
+.subNavList {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: #{$mobile-breakpoint}px) {
+    flex-direction: row;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}

@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Danny's IO | Typography</title>
       </Head>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <div className={styles.row}>
           <div className={styles.cap}>
             <Cap>Display</Cap>
@@ -56,7 +56,7 @@ export default function Home() {
             <Cap>Mellifluous</Cap>
           </div>
         </div>
-      </main>
+      </div>
     </>
   )
 }

@@ -11,7 +11,7 @@ export default function Elevations() {
       <Head>
         <title>Danny's IO | Elevations</title>
       </Head>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <Heading size="h2">Elevations</Heading>
 
         <BaseElevation>
@@ -95,7 +95,7 @@ export default function Elevations() {
           </div>
         </BaseElevation>
 
-      </main>
+      </div>
     </>
   )
 }
