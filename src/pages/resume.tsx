@@ -1,8 +1,8 @@
+import Secondary from 'components/buttons/Secondary';
 import Container from 'components/layouts/Container';
 import Cap from 'components/typography/Cap';
 import Heading from 'components/typography/Heading';
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from './resume.module.scss'
 
 export default function Home() {
@@ -20,9 +20,9 @@ export default function Home() {
             </Heading>
 
             <Cap>
-              <Link href="https://docs.google.com/document/u/1/export?format=docx&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU" download={true}>
-                Download CV
-              </Link>
+              <Secondary type='link' href="https://docs.google.com/document/u/1/export?format=docx&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU" download={true}>
+                Download
+              </Secondary>
             </Cap>
           </div>
 

@@ -16,11 +16,11 @@ import styles from './index.module.scss'
 import BaseElevation from 'components/elevations/Base'
 
 const CTA = () => <Container className={styles.thumbnailCta}>
-  <Primary>
+  <Primary type='link' href="/resume">
     <Cap>RESUME</Cap>
   </Primary>
 
-  <Secondary>
+  <Secondary type='link' href="/projects">
     <Cap>PROJECTS</Cap>
   </Secondary>
 </Container>
