@@ -29,6 +29,7 @@ export default function Heading(props: HeadingProps) {
   const headingClass = styles[size]
 
   const Component = headingComponents.get(size)
+  if (!Component) return null
 
   return <Component className={[className, inter.className, headingClass].join(' ')} {...rest}>
     {children}

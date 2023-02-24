@@ -1,0 +1,28 @@
+@import '@/styles/layout';
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumeEmbed {
+  width: 100%;
+  height: 30rem;
+
+  @media (min-width: $mobile-breakpoint-px) {
+    height: 60rem;
+  }
+}
