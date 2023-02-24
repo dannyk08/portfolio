@@ -11,7 +11,9 @@ import Base from 'components/icons/Base'
 import Link from 'next/link'
 import windowSize from 'effects/windowSize'
 import Divider from 'components/layouts/Divider'
+import Display from 'components/typography/Display'
 import styles from './index.module.scss'
+import BaseElevation from 'components/elevations/Base'
 
 const CTA = () => <Container className={styles.thumbnailCta}>
   <Primary>
@@ -68,11 +70,11 @@ export default function Home() {
             </ul>
           </Thumbnail>
 
-          <Container className={styles.profileDesc}>
-            <Heading size='h1'>Hello</Heading>
+          <BaseElevation className={styles.profileDesc}>
+            <Display>Hello</Display>
             <P>I'm Daniel Romero, a Frontend Web Developer based in Los Angeles, CA.</P>
-            <P>I've been developing, and maintaining, web applications using modern frameworks and practices for over 6 years.</P>
-          </Container>
+            <P>I've been developing, and maintaining, web applications using modern frameworks and practices for over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years.</P>
+          </BaseElevation>
         </Container>
       </div>
     </>

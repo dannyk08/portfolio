@@ -12,7 +12,8 @@
   --tertiary-color: #{$violet-blue};
   --foreground-hex: #{$raisin-black};
   --background-hex: #{$white-smoke};
-  --background-secondary-hex: #{$white-smoke-dark-01};
+  --background-hex-light: #{$white-smoke-light-01};
+  --background-hex-dark: #{$white-smoke-dark-01};
   --box-shadow-1: #{$box-shadow-light};
   --box-shadow-2: #{$box-shadow-light-2};
 }
@@ -21,7 +22,8 @@
   :root {
     --foreground-hex: #{$white-smoke};
     --background-hex: #{$raisin-black};
-    --background-secondary-hex: #{$raisin-black-dark-01};
+    --background-hex-light: #{$raisin-black-light-01};
+    --background-hex-dark: #{$raisin-black-dark-01};
     --box-shadow-1: #{$box-shadow-dark};
     --box-shadow-2: #{$box-shadow-dark-2};
   }

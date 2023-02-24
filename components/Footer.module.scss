@@ -1,0 +1,38 @@
+@import '@/styles/layout';
+
+.mainNav,
+.subNavCommunications,
+.subNavCredits,
+.subNavIcons {
+  padding-bottom: .5rem;
+
+  @media (max-width: $mobile-breakpoint-px) {
+    li {
+      padding-top: .5rem;
+    }
+  }
+}
+
+.mainNav,
+.subNavCommunications,
+.subNavIcons {
+
+  @media (min-width: $mobile-breakpoint-px) {
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
+.mainNav {
+  align-items: flex-start;
+}
+
+.subNavCommunications {
+  gap: 4rem;
+}
+
+.subNavIcons {
+  display: flex;
+  gap: 1.5rem;
+}

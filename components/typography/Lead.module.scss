@@ -1,0 +1,5 @@
+@import '@/styles/typography';
+
+.lead {
+  @include typography(1.5, 700);
+}

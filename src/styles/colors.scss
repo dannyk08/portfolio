@@ -4,9 +4,13 @@ $amaranth: #e62d5aff;
 $raisin-black: #1c1e2dff;
 $white-smoke: #f5f5f5ff;
 
+$raisin-black-light-01: lighten($raisin-black, 6.25%);
+
 $raisin-black-dark-01: darken($raisin-black, 6.25%);
 $raisin-black-dark-02: darken($raisin-black, 12.5%);
 $raisin-black-dark-03: darken($raisin-black, 18.75%);
+
+$white-smoke-light-01: lighten($white-smoke, 6.25%);
 
 $white-smoke-dark-01: darken($white-smoke, 6.25%);
 $white-smoke-dark-02: darken($white-smoke, 12.5%);

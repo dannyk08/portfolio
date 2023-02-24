@@ -54,7 +54,7 @@
 }
 
 .thumbnailIcons {
-  background-color: white;
+  background-color: var(--background-hex-light);
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -62,8 +62,16 @@
   align-items: center;
 }
 
+.profileDescContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .profileDesc {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
+  background: transparent;
 }
