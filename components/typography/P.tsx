@@ -11,5 +11,5 @@ export default function P(props: Props) {
 
   return <p className={[poppins.className, styles.body].join(' ')}>
     {children}
-  </p >
+  </p>
 }

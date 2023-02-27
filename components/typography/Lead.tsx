@@ -9,7 +9,7 @@ const poppins = Poppins({
 export default function Lead(props: Props) {
   const { children } = props || {}
 
-  return <p className={[poppins.className, styles.lead].join(' ')} >
+  return <p className={[poppins.className, styles.lead].join(' ')}>
     {children}
   </p>
 }

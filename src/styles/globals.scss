@@ -46,8 +46,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-hex));
-  background: rgb(var(--background-hex)) no-repeat cover;
+  color: var(--foreground-hex);
+  background: var(--background-hex);
   font-size: var(--font-size);
 }
 

@@ -17,11 +17,11 @@ import BaseElevation from 'components/elevations/Base'
 
 const CTA = () => <Container className={styles.thumbnailCta}>
   <Primary as='link' href="/resume">
-    <Cap>RESUME</Cap>
+    RESUME
   </Primary>
 
   <Secondary as='link' href="/projects">
-    <Cap>PROJECTS</Cap>
+    PROJECTS
   </Secondary>
 </Container>
 

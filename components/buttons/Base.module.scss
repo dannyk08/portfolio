@@ -1,7 +1,13 @@
 @import '@/styles/elevation';
+@import '@/styles/typography';
 
 .button {
   @include elevation;
+  @include typography(1.5, 600);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
   box-shadow: $elevation-2;
 
   background: transparent;
@@ -12,16 +18,10 @@
   transition: box-shadow .125s ease-out;
   margin: 0;
 
+  &:active,
+  &:focus,
   &:hover {
     box-shadow: $elevation-4;
     transition: box-shadow .125s ease-in;
-  }
-
-  &:active {
-    box-shadow: $elevation-2;
-  }
-
-  &:focus {
-    box-shadow: $elevation-2;
   }
 }

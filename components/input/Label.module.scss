@@ -1,0 +1,7 @@
+@import '@/styles/typography';
+
+.label {
+  @include typography(1.5, 700);
+  display: flex;
+  flex-direction: column;
+}

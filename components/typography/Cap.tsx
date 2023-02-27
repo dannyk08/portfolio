@@ -1,15 +1,17 @@
 import { Poppins } from '@next/font/google'
-import { Props } from 'next/script'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './Cap.module.scss'
 
 const poppins = Poppins({
   weight: '300',
 })
 
-export default function Cap(props: Props) {
-  const { children, } = props || {}
+type CapProps = DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> & {}
 
-  return <p className={[poppins.className, styles.cap].join(' ')} >
+export default function Cap(props: CapProps) {
+  const { children, className } = props || {}
+
+  return <p className={[poppins.className, styles.cap, className].join(' ')}>
     {children}
   </p>
 }

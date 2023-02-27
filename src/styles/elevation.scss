@@ -5,6 +5,8 @@
   border-radius: .5rem;
 }
 
+$elevation-neg-1: inset 0px 0.5px 4px var(--box-shadow-2);
+$elevation-0: none;
 $elevation-1: 0px 0px 1px var(--box-shadow-1), 0px 0.5px 2px var(--box-shadow-2);
 $elevation-2: 0px 0px 1px var(--box-shadow-1), 0px 2px 4px var(--box-shadow-2);
 $elevation-3: 0px 0px 2px var(--box-shadow-1), 0px 4px 8px var(--box-shadow-2);

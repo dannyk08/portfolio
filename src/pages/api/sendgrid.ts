@@ -25,7 +25,7 @@ export default async function sendMail(req: Request, res: Response) {
     await sendgrid.send({
       to: 'danny@dannys.io',
       from: 'danny@dannys.io',
-      subject: `[Lead from website] : ${subject}`,
+      subject: `[Lead from Danny's IO Form]: ${subject}`,
       html: `<!DOCTYPE html
       PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html lang="en">
@@ -39,10 +39,12 @@ export default async function sendMail(req: Request, res: Response) {
     
     <body>
       <div style="margin-left: 20px;margin-right: 20px;">
-        <h3>You've got a new mail from ${fullName}(${email}) </h3>
+        <h3 style="font-size: 28px;">New outreach</h3>
         <div style="font-size: 16px;">
-          <p>Message:</p>
-          <p>${message}</p>
+          <p><b>From:</b></p>
+          <p><pre>${fullName}(${email})</pre></p>
+          <p><b>Message:</b></p>
+          <p><i>"${message}</i>"</p>
           <br>
         </div>
       </div>
