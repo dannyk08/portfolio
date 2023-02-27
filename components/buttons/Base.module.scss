@@ -2,6 +2,7 @@
 
 .button {
   @include elevation;
+  box-shadow: $elevation-2;
 
   background: transparent;
   outline: none;
@@ -12,8 +13,8 @@
   margin: 0;
 
   &:hover {
-    box-shadow: $elevation-2;
-    transition: box-shadow .25s ease-in;
+    box-shadow: $elevation-4;
+    transition: box-shadow .125s ease-in;
   }
 
   &:active {

@@ -27,11 +27,6 @@ export default function Footer(props: Props) {
         <li>
           <ul className={styles.subNavCommunications}>
             <li>
-              <Lead>Write</Lead>
-              <P><Link href='mailto:danny@dannys.io'>danny@dannys.io</Link></P>
-            </li>
-
-            <li>
               <Lead>Follow</Lead>
               <ul className={styles.subNavIcons}>
                 <li>

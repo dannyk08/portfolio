@@ -6,10 +6,10 @@ type BaseElevationProps = Props & {
 }
 
 export default function BaseElevation(props: BaseElevationProps) {
-  const { children, className, elevation = 0, ...rest } = props
+  const { children, elevation = 0, className } = props
   const elevationClass = `elevation-${elevation}`
 
-  return <div className={[styles[elevationClass], className].join(' ')} {...rest}>
+  return <div className={[styles[elevationClass], className].join(' ')}>
     {children}
   </div>
 }

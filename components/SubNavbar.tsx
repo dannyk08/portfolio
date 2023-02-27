@@ -8,17 +8,12 @@ export default function SubNavList(props: Props) {
     <ul className={styles.subNavList}>
       <li>
         <Cap>
-          <Link href='/'>About</Link>
-        </Cap>
-      </li>
-      <li>
-        <Cap>
           <Link href='/resume'>Resume</Link>
         </Cap>
       </li>
       <li>
         <Cap>
-          <Link href='/project'>Projects</Link>
+          <Link href='/projects'>Projects</Link>
         </Cap>
       </li>
       <li>

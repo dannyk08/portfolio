@@ -1,4 +1,8 @@
 .primary {
   background-color: var(--primary-color);
-  color: var(--background-hex);
+  color: var(--foreground-hex);
+
+  &:hover {
+    color: var(--foreground-hex);
+  }
 }

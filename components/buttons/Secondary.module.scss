@@ -1,4 +1,8 @@
 .secondary {
   background-color: var(--secondary-color);
-  color: var(--background-hex);
+  color: var(--foreground-hex);
+
+  &:hover {
+    color: var(--foreground-hex);
+  }
 }

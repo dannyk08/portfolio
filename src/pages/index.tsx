@@ -16,11 +16,11 @@ import styles from './index.module.scss'
 import BaseElevation from 'components/elevations/Base'
 
 const CTA = () => <Container className={styles.thumbnailCta}>
-  <Primary type='link' href="/resume">
+  <Primary as='link' href="/resume">
     <Cap>RESUME</Cap>
   </Primary>
 
-  <Secondary type='link' href="/projects">
+  <Secondary as='link' href="/projects">
     <Cap>PROJECTS</Cap>
   </Secondary>
 </Container>
@@ -39,7 +39,7 @@ export default function Home() {
         <Container className={styles.mainContent}>
           <Thumbnail className={styles.thumbnail}>
             <Container className={styles.thumbnailUserInfo}>
-              <Image className={styles.thumbnailImage} src='/images/daniel-romero-profile.jpg' alt='Daniel Romero profile picture' height={200} width={200} />
+              <Image loading='eager' className={styles.thumbnailImage} src='/images/daniel-romero-profile.jpg' alt='Daniel Romero profile picture' height={200} width={200} />
               <Heading>Daniel <br /> Romero</Heading>
               <Divider />
               <Cap>Web Developer</Cap>
@@ -72,6 +72,10 @@ export default function Home() {
 
           <BaseElevation className={styles.profileDesc}>
             <Display>Hello</Display>
+            {
+              !size.isMobile &&
+              <CTA />
+            }
             <P>I'm Daniel Romero, a Frontend Web Developer based in Los Angeles, CA.</P>
             <P>I've been developing, and maintaining, web applications using modern frameworks and practices for over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years.</P>
           </BaseElevation>

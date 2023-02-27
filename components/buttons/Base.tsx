@@ -1,27 +1,29 @@
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 import { Props } from 'next/script';
 import styles from './Base.module.scss'
 
-const Button = ({ children, ...rest }: Props) => <button {...rest}>{children}</button>
-const Url = ({ children, ...rest }: Props) => <Link {...rest}>{children}</Link>
-
-const buttonType = new Map([
-  ['button', Button],
-  ['link', Url]
-])
-
-type BaseButtonProps = Props & {
-  type: 'button' | 'link'
+type BaseProps = {
+  children: React.ReactNode,
+  className?: string,
+  styleType?: 'primary' | 'secondary' | 'unassigned',
 }
 
-export default function BaseButton(props: BaseButtonProps) {
-  const { children, className, type = 'button', ...rest } = props
+type ButtonAsButton = BaseProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
+  as?: 'button'
+}
 
-  const Component = buttonType.get(type)
+type ButtonAsLink = BaseProps & Omit<LinkProps, keyof BaseProps> & {
+  as: 'link'
+}
 
-  if (!Component) return null
+export type BaseButtonProps = ButtonAsButton | ButtonAsLink
 
-  return <Component {...rest} className={[styles.button, className].join(' ')} >
-    {children}
-  </Component>
+export default function BaseButton(props: BaseButtonProps): JSX.Element {
+  if (props.as == 'link') {
+    const { children, className, as, ...rest } = props
+    return <Link className={[styles.button, styles[as], className].join(' ')} {...rest}>{children}</ Link>
+  }
+
+  const { children, className, as = 'button', ...rest } = props
+  return <button className={[styles.button, styles[as], className].join(' ')} {...rest}>{children}</button>
 }
