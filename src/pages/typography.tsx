@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Heading from 'components/typography/Heading'
-import Display from 'components/typography/Display'
-import P from 'components/typography/P'
-import Cap from 'components/typography/Cap'
-import Container from 'components/layouts/Container'
+import Heading from '@/components/typography/Heading'
+import Display from '@/components/typography/Display'
+import P from '@/components/typography/P'
+import Cap from '@/components/typography/Cap'
+import Container from '@/components/layouts/Container'
 import styles from './typography.module.scss'
-import Lead from 'components/typography/Lead'
+import Lead from '@/components/typography/Lead'
 
 export default function Home() {
   return (

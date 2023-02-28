@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import Heading from 'components/typography/Heading'
-import Cap from 'components/typography/Cap'
-import Thumbnail from 'components/Thumbnail'
+import Heading from '@/components/typography/Heading'
+import Cap from '@/components/typography/Cap'
+import Thumbnail from '@/components/Thumbnail'
 import Image from 'next/image'
-import Primary from 'components/buttons/Primary'
-import Secondary from 'components/buttons/Secondary'
-import P from 'components/typography/P'
-import Container from 'components/layouts/Container'
-import Base from 'components/icons/Base'
+import Primary from '@/components/buttons/Primary'
+import Secondary from '@/components/buttons/Secondary'
+import P from '@/components/typography/P'
+import Container from '@/components/layouts/Container'
+import Base from '@/components/icons/Base'
 import Link from 'next/link'
-import windowSize from 'effects/windowSize'
-import Divider from 'components/layouts/Divider'
-import Display from 'components/typography/Display'
-import Page from 'components/layouts/Page'
+import useWindowSize from '@/effects/useWindowSize'
+import Divider from '@/components/layouts/Divider'
+import Display from '@/components/typography/Display'
+import Page from '@/components/layouts/Page'
 import styles from './index.module.scss'
 
 const CTA = () => <Container className={styles.thumbnailCta}>
@@ -27,7 +27,7 @@ const CTA = () => <Container className={styles.thumbnailCta}>
 
 
 export default function Home() {
-  const size = windowSize()
+  const size = useWindowSize()
 
   return (
     <>

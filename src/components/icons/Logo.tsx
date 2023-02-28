@@ -1,4 +1,4 @@
-import BaseButton, { BaseButtonProps } from 'components/buttons/Base';
+import BaseButton, { BaseButtonProps } from '@/components/buttons/Base';
 import styles from './Logo.module.scss'
 
 export default function Logo(props: BaseButtonProps) {

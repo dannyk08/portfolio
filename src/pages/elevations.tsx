@@ -1,8 +1,8 @@
-import BaseElevation from 'components/elevations/Base'
-import Container from 'components/layouts/Container'
-import Cap from 'components/typography/Cap'
-import Heading from 'components/typography/Heading'
-import P from 'components/typography/P'
+import BaseElevation from '@/components/elevations/Base'
+import Container from '@/components/layouts/Container'
+import Cap from '@/components/typography/Cap'
+import Heading from '@/components/typography/Heading'
+import P from '@/components/typography/P'
 import Head from 'next/head'
 import styles from './elevations.module.scss'
 

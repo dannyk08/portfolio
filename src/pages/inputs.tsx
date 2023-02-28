@@ -1,6 +1,6 @@
-import BaseInput from 'components/input/Base';
-import Label from 'components/input/Label';
-import Container from 'components/layouts/Container';
+import BaseInput from '@/components/input/Base';
+import Label from '@/components/input/Label';
+import Container from '@/components/layouts/Container';
 import Head from 'next/head';
 import { useState } from 'react';
 import styles from './inputs.module.scss'

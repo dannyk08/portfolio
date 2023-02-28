@@ -1,4 +1,4 @@
-import BaseButton from 'components/buttons/Base';
+import BaseButton from '@/components/buttons/Base';
 
 import styles from './Menu.module.scss'
 

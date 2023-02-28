@@ -1,8 +1,8 @@
-import Heading from 'components/typography/Heading';
-import Base from 'components/icons/Base';
+import Heading from '@/components/typography/Heading';
+import Base from '@/components/icons/Base';
 import Head from 'next/head';
 import styles from './projects.module.scss'
-import Page from 'components/layouts/Page';
+import Page from '@/components/layouts/Page';
 
 export default function Projects() {
   return (

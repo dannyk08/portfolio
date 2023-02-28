@@ -1,7 +1,7 @@
-import Secondary from 'components/buttons/Secondary';
-import Page from 'components/layouts/Page';
-import Cap from 'components/typography/Cap';
-import Heading from 'components/typography/Heading';
+import Secondary from '@/components/buttons/Secondary';
+import Page from '@/components/layouts/Page';
+import Cap from '@/components/typography/Cap';
+import Heading from '@/components/typography/Heading';
 import Head from 'next/head';
 import styles from './resume.module.scss'
 

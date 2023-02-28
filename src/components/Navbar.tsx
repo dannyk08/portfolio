@@ -1,7 +1,7 @@
 import BaseElevation from './elevations/Base';
 import Menu from './icons/Menu';
 import { useEffect, useState } from 'react';
-import windowSize from 'effects/windowSize';
+import useWindowSize from '@/effects/useWindowSize';
 import SubNavList from './SubNavbar';
 import Modal from './Modal';
 import { useRouter } from 'next/router';
@@ -11,7 +11,7 @@ import styles from './Navbar.module.scss'
 export default function Navbar() {
   const [menuActive, setMenuActive] = useState(false)
   const router = useRouter()
-  const size = windowSize()
+  const size = useWindowSize()
 
   const handleMenuClick = () => {
     setMenuActive(!menuActive)
@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (menuActive) {
-      setMenuActive(!menuActive)
+      handleMenuClick()
     }
   }, [router.asPath])
 

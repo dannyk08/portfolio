@@ -1,13 +1,13 @@
-import Heading from 'components/typography/Heading';
+import Heading from '@/components/typography/Heading';
 import Head from 'next/head';
-import Label from 'components/input/Label';
-import BaseInput from 'components/input/Base';
-import Primary from 'components/buttons/Primary';
+import Label from '@/components/input/Label';
+import BaseInput from '@/components/input/Base';
+import Primary from '@/components/buttons/Primary';
 import { useState } from 'react';
-import { validateEmail, validateString } from 'utils/regex';
-import Card from 'components/layouts/Card';
-import FormSubmitMessage from 'components/FormSubmitMessage';
-import Page from 'components/layouts/Page';
+import { validateEmail, validateString } from '@/utils/regex';
+import Card from '@/components/layouts/Card';
+import FormSubmitMessage from '@/components/FormSubmitMessage';
+import Page from '@/components/layouts/Page';
 import styles from './contact.module.scss'
 
 const validations = (string: string, type: string | 'email') => {
