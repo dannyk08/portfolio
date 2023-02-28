@@ -1,0 +1,14 @@
+@import '@/styles/layout';
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-breakpoint-px) {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}

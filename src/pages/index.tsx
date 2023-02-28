@@ -12,8 +12,8 @@ import Link from 'next/link'
 import windowSize from 'effects/windowSize'
 import Divider from 'components/layouts/Divider'
 import Display from 'components/typography/Display'
+import Page from 'components/layouts/Page'
 import styles from './index.module.scss'
-import BaseElevation from 'components/elevations/Base'
 
 const CTA = () => <Container className={styles.thumbnailCta}>
   <Primary as='link' href="/resume">
@@ -35,11 +35,17 @@ export default function Home() {
         <title>Danny's IO | Developer Portfolio</title>
         <meta name="description" content="Web Developer Portfolio made by Daniel (Danny) Romero." />
       </Head>
-      <div className={styles.main}>
-        <Container className={styles.mainContent}>
+      <Page>
+        <div className={styles.mainContent}>
           <Thumbnail className={styles.thumbnail}>
             <Container className={styles.thumbnailUserInfo}>
-              <Image loading='eager' className={styles.thumbnailImage} src='/images/daniel-romero-profile.jpg' alt='Daniel Romero profile picture' height={200} width={200} />
+              <Image
+                decoding='async'
+                loading='eager'
+                className={styles.thumbnailImage}
+                src='/images/daniel-romero-profile.jpg'
+                alt='Daniel Romero profile picture'
+                height={200} width={200} />
               <Heading>Daniel <br /> Romero</Heading>
               <Divider />
               <Cap>Web Developer</Cap>
@@ -70,7 +76,7 @@ export default function Home() {
             </ul>
           </Thumbnail>
 
-          <BaseElevation className={styles.profileDesc}>
+          <div className={styles.profileDesc}>
             <Display>Hello</Display>
             {
               !size.isMobile &&
@@ -78,9 +84,9 @@ export default function Home() {
             }
             <P>I'm Daniel Romero, a Frontend Web Developer based in Los Angeles, CA.</P>
             <P>I've been developing, and maintaining, web applications using modern frameworks and practices for over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years.</P>
-          </BaseElevation>
-        </Container>
-      </div>
+          </div>
+        </div>
+      </Page>
     </>
   )
 }

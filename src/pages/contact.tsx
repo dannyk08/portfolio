@@ -6,8 +6,9 @@ import Primary from 'components/buttons/Primary';
 import { useState } from 'react';
 import { validateEmail, validateString } from 'utils/regex';
 import Card from 'components/layouts/Card';
-import styles from './projects.module.scss'
 import FormSubmitMessage from 'components/FormSubmitMessage';
+import Page from 'components/layouts/Page';
+import styles from './contact.module.scss'
 
 const validations = (string: string, type: string | 'email') => {
   const validations = [validateString]
@@ -19,7 +20,17 @@ const validations = (string: string, type: string | 'email') => {
   return validations.some(validation => !validation(string))
 }
 
-const originalErrorsStates = Object.freeze({
+const formFields = [
+  'firstName',
+  'lastName',
+  'email',
+  'subject',
+  'message',
+] as const
+
+type FormFields = typeof formFields[number]
+
+const originalErrorsStates: Record<FormFields, boolean> = Object.freeze({
   firstName: false,
   lastName: false,
   email: false,
@@ -27,7 +38,7 @@ const originalErrorsStates = Object.freeze({
   message: false,
 })
 
-const originalInputsStates = Object.freeze({
+const originalInputsStates: Record<FormFields, string> = Object.freeze({
   firstName: '',
   lastName: '',
   email: '',
@@ -36,7 +47,7 @@ const originalInputsStates = Object.freeze({
 })
 
 export default function Contact() {
-  const [sendMessage, setSendMessage] = useState('Send')
+  const [formSending, setFormSending] = useState(false)
   const [showFormErrorMessage, setShowFormErrorMessage] = useState(false)
   const [showFormSuccessMessage, setShowFormSuccessMessage] = useState(false)
   const [errors, setError] = useState({ ...originalErrorsStates })
@@ -44,6 +55,8 @@ export default function Contact() {
 
   const handleOnSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault()
+    if (formSending) return
+
     const newErrors = Object.entries(inputs)
       .reduce((acc, [key, value]) => ({
         ...acc,
@@ -54,7 +67,7 @@ export default function Contact() {
 
     const formHasErrors = Object.values(newErrors).some(e => e)
     if (!formHasErrors) {
-      setSendMessage('Sending...')
+      setFormSending(true)
 
       const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
@@ -79,11 +92,11 @@ export default function Contact() {
 
       setError({ ...originalErrorsStates })
       setInput({ ...originalInputsStates })
-      setSendMessage('Send')
+      setFormSending(false)
     }
   }
 
-  const handleOnChange = (field: string) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleOnChange = (field: FormFields) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setInput({
       ...inputs,
       [field]: event.target.value
@@ -111,74 +124,75 @@ export default function Contact() {
         <title>Danny's IO | Daniel Romero contact page</title>
         <meta name="description" content="Contact Daniel (Danny) Romero Web Developer for your web projects." />
       </Head>
-      <div className={styles.main}>
-        <Heading> Contact</Heading>
+      <Page>
+        <Heading>Contact</Heading>
 
-        <Card>
-          <form onSubmit={handleOnSubmit}>
-            <Label value='First Name *'>
-              <BaseInput
-                required
-                entryType='text'
-                autoComplete='given-name'
-                error={errors.firstName}
-                value={inputs.firstName}
-                onChange={handleOnChange('firstName')} />
-            </Label>
+        <div className={styles.cardContainer}>
+          <Card>
+            <form onSubmit={handleOnSubmit}>
+              <Label value='First Name *'>
+                <BaseInput
+                  required
+                  entryType='text'
+                  autoComplete='given-name'
+                  error={errors.firstName}
+                  value={inputs.firstName}
+                  onChange={handleOnChange('firstName')} />
+              </Label>
 
-            <Label value='Last Name *'>
-              <BaseInput
-                required
-                entryType='text'
-                autoComplete='family-name'
-                error={errors.lastName}
-                value={inputs.lastName}
-                onChange={handleOnChange('lastName')} />
-            </Label>
+              <Label value='Last Name *'>
+                <BaseInput
+                  required
+                  entryType='text'
+                  autoComplete='family-name'
+                  error={errors.lastName}
+                  value={inputs.lastName}
+                  onChange={handleOnChange('lastName')} />
+              </Label>
 
-            <Label value='Email *'>
-              <BaseInput
-                required
-                entryType='email'
-                autoComplete='email'
-                error={errors.email}
-                value={inputs.email}
-                onChange={handleOnChange('email')} />
-            </Label>
+              <Label value='Email *'>
+                <BaseInput
+                  required
+                  entryType='email'
+                  autoComplete='email'
+                  error={errors.email}
+                  value={inputs.email}
+                  onChange={handleOnChange('email')} />
+              </Label>
 
-            <Label value='Subject *'>
-              <BaseInput
-                required
-                entryType='text'
-                error={errors.subject}
-                value={inputs.subject}
-                onChange={handleOnChange('subject')} />
-            </Label>
+              <Label value='Subject *'>
+                <BaseInput
+                  required
+                  entryType='text'
+                  error={errors.subject}
+                  value={inputs.subject}
+                  onChange={handleOnChange('subject')} />
+              </Label>
 
-            <Label value='Message *'>
-              <BaseInput
-                required
-                entryType='textarea'
-                error={errors.message}
-                value={inputs.message}
-                onChange={handleOnChange('message')} />
-            </Label>
+              <Label value='Message *'>
+                <BaseInput
+                  required
+                  entryType='textarea'
+                  error={errors.message}
+                  value={inputs.message}
+                  onChange={handleOnChange('message')} />
+              </Label>
 
-            <Primary>
-              {sendMessage}
-            </Primary>
-          </form>
-          {
-            showFormErrorMessage &&
-            <FormSubmitMessage success={false}>Sorry, there was an error sending your message. Please reach out on LinkedIn or email directly!</FormSubmitMessage>
-          }
-          {
-            showFormSuccessMessage &&
-            <FormSubmitMessage success={true}>Success! Your message was delivered successfully, please allow a couple days to let me get back to you!</FormSubmitMessage>
-          }
-        </Card>
-
-      </div>
+              <Primary>
+                {formSending ? 'Sending...' : 'Send'}
+              </Primary>
+            </form>
+            {
+              showFormErrorMessage &&
+              <FormSubmitMessage success={false}>Sorry, there was an error sending your message. Please reach out on LinkedIn or email directly!</FormSubmitMessage>
+            }
+            {
+              showFormSuccessMessage &&
+              <FormSubmitMessage success={true}>Success! Your message was delivered successfully, please allow a couple days to let me get back to you!</FormSubmitMessage>
+            }
+          </Card>
+        </div>
+      </Page>
     </>
   )
 }

@@ -2,7 +2,7 @@ import Heading from 'components/typography/Heading';
 import Base from 'components/icons/Base';
 import Head from 'next/head';
 import styles from './projects.module.scss'
-import Container from 'components/layouts/Container';
+import Page from 'components/layouts/Page';
 
 export default function Projects() {
   return (
@@ -11,13 +11,10 @@ export default function Projects() {
         <title>Danny's IO | Daniel Romero projects page</title>
         <meta name="description" content="Daniel (Danny) Romero Web Developer projects collection." />
       </Head>
-      <div className={styles.main}>
-        <Container>
-          <Heading>Projects</Heading>
-          <Base iconName='wrench' />
-        </Container>
-
-      </div>
+      <Page className={styles.main}>
+        <Heading>Projects</Heading>
+        <Base iconName='wrench' />
+      </Page>
     </>
   )
 }

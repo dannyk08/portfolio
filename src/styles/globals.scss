@@ -12,6 +12,8 @@
   --tertiary-color: #{$violet-blue};
   --foreground-hex: #{$raisin-black};
   --background-hex: #{$white-smoke};
+  --primary-button-color: #{$raisin-black};
+  --secondary-button-color: #{$white-smoke};
   --background-hex-light: #{$white-smoke-light-01};
   --background-hex-dark: #{$white-smoke-dark-01};
   --box-shadow-1: #{$box-shadow-light};
@@ -22,6 +24,8 @@
   :root {
     --foreground-hex: #{$white-smoke};
     --background-hex: #{$raisin-black};
+    --primary-button-color: #{$white-smoke};
+    --secondary-button-color: #{$raisin-black};
     --background-hex-light: #{$raisin-black-light-01};
     --background-hex-dark: #{$raisin-black-dark-01};
     --box-shadow-1: #{$box-shadow-dark};

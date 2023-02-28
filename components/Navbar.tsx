@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import BaseElevation from './elevations/Base';
 import Menu from './icons/Menu';
 import { useEffect, useState } from 'react';
@@ -7,6 +5,7 @@ import windowSize from 'effects/windowSize';
 import SubNavList from './SubNavbar';
 import Modal from './Modal';
 import { useRouter } from 'next/router';
+import Logo from './icons/Logo';
 import styles from './Navbar.module.scss'
 
 export default function Navbar() {
@@ -28,9 +27,7 @@ export default function Navbar() {
     <nav>
       <ul className={styles.mainNavList}>
         <li>
-          <Link href='/' aria-label='Home page'>
-            <Image src='/favicon.svg' alt="Danny's IO logo" width={50} height={50} priority />
-          </Link>
+          <Logo as="link" href='/' aria-label="Danny's IO Homepage" />
         </li>
 
         {

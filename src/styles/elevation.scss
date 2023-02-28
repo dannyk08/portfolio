@@ -1,5 +1,5 @@
-@mixin elevation() {
-  background-color: var(--background-hex);
+@mixin elevation($background-color: var(--background-hex)) {
+  background-color: $background-color;
   padding: 1rem;
   margin: 1rem;
   border-radius: .5rem;

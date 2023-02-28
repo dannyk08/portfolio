@@ -1,9 +1,9 @@
 .secondary {
-  background-color: var(--secondary-color);
-  color: var(--background-hex);
+  background-color: var(--secondary-button-color);
+  color: var(--foreground-hex);
   min-width: 7rem;
 
   &:hover {
-    color: var(--background-hex);
+    color: var(--foreground-hex);
   }
 }

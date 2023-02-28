@@ -12,7 +12,9 @@ export default function Layout({ children }: Props) {
     <Navbar />
     <main className={classNames(styles.layout, {
       [styles.home]: router.route == '/',
-    })}>{children}</main>
+    })}>
+      {children}
+    </main>
     <Footer />
   </>
 

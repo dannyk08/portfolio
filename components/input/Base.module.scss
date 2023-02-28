@@ -1,7 +1,7 @@
 @import '@/styles/elevation';
 
 .input {
-  @include elevation;
+  @include elevation(var(--background-hex-dark));
   margin-left: 0;
   margin-right: 0;
   border: none;
