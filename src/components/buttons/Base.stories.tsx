@@ -1,38 +1,49 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import BaseButton from './Base';
+import ButtonBase from './Base';
 
 export default {
-  title: 'Random',
-  Component: BaseButton,
+  title: 'Components/Button',
+  Component: ButtonBase,
   argTypes: {
-    // 
+    as: {
+      defaultValue: 'button',
+      control: 'select',
+      options: [
+        'button',
+        'link'
+      ]
+    },
+    type: {
+      if: {
+        arg: 'as',
+        eq: 'button',
+      },
+      defaultValue: 'button',
+      control: 'select',
+      options: [
+        'button',
+        'submit'
+      ]
+    },
+    href: {
+      if: {
+        arg: 'as',
+        eq: 'link',
+      },
+      defaultValue: 'https://google.com',
+      control: 'text',
+    }
   }
 
-} as ComponentMeta<typeof BaseButton>
+} as ComponentMeta<typeof ButtonBase>
 
 
-const Template: ComponentStory<typeof BaseButton> = (args) => <BaseButton {...args} />;
+const Template: ComponentStory<typeof ButtonBase> = (args) => <div>
+  <ButtonBase {...args}>
+    Button Text
+  </ButtonBase>
+</div>;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  // primary: true,
-  // label: 'Button',
-};
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  // label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  // size: 'large',
-  // label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  // size: 'small',
-  // label: 'Button',
-};
+export const Base = Template.bind({});
+Base.args = {};

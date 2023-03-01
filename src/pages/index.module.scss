@@ -2,17 +2,15 @@
 @import '@/styles/elevation';
 
 .mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: $tablet-breakpoint-px) {
-    display: flex;
     flex-direction: row;
   }
 }
 
-.thumbnail {
-  @media (min-width: $tablet-breakpoint-px) {
-    min-width: 22.5rem;
-  }
-}
 
 .thumbnailUserInfo {
   width: 100%;
