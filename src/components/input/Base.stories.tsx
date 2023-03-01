@@ -2,9 +2,13 @@ import { ComponentStory } from '@storybook/react';
 import BaseInput from './Base';
 
 export default {
-  title: 'Components/Input',
+  title: 'Components/Input/Base',
   Component: BaseInput,
   argTypes: {
+    value: {
+      control: 'text',
+      defaultValue: 'Base input text'
+    },
     entryType: {
       defaultValue: 'text',
       control: 'select',
@@ -26,9 +30,14 @@ export default {
 }
 
 const Template: ComponentStory<typeof BaseInput> = (args) => <div>
-  <BaseInput {...args} />
+  <BaseInput {...args} onChange={(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => event.target.value} />
 </div>;
 
 
 export const Base = Template.bind({});
 Base.args = {};
+
+export const TextArea = Template.bind({});
+TextArea.args = {
+  entryType: 'textarea'
+};

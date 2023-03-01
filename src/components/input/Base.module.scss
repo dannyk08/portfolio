@@ -2,6 +2,7 @@
 
 .input {
   @include elevation(var(--background-hex-dark));
+  font-weight: 300;
   margin-left: 0;
   margin-right: 0;
   border: none;

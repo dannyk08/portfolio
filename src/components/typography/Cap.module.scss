@@ -1,7 +1,7 @@
 @import '@/styles/typography';
 
 .cap {
-  @include typography(1.0625, 400);
+  @include typography(1.0625, 300);
   margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 2px;

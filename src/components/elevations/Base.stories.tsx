@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import P from '../typography/P';
 import ElevationBase from './Base';
 
 export default {
@@ -7,7 +8,16 @@ export default {
   argTypes: {
     elevation: {
       defaultValue: 0,
-      control: 'number'
+      control: 'select',
+      options: [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+      ]
     }
   }
 
@@ -17,6 +27,49 @@ export default {
 const Template: ComponentStory<typeof ElevationBase> = (args) => <div>
   <ElevationBase {...args}>
     <p>{args.elevation}</p>
+    <br />
+    {
+      args.elevation === 0 &&
+      <div>
+        <P>Background, Alerts, Button disabled, Input Forms disabled</P>
+      </div>
+    }
+    {
+      args.elevation == 1 &&
+      <div>
+        <P>Card, Pressed button, Progressive button</P>
+      </div>
+    }
+    {
+      args.elevation == 2 &&
+      <div>
+        <P>Button, Notification badges</P>
+      </div>
+    }
+    {
+      args.elevation == 3 &&
+      <div>
+        <P>Navigation Menu, Bar</P>
+      </div>
+    }
+    {
+      args.elevation == 4 &&
+      <div>
+        <P>Card Raised, Button Raised, Dropdown Menu</P>
+      </div>
+    }
+    {
+      args.elevation == 5 &&
+      <div>
+        <P>Picker, Popover</P>
+      </div>
+    }
+    {
+      args.elevation == 6 &&
+      <div>
+        <P>Modals, Dialogue</P>
+      </div>
+    }
   </ElevationBase>
 </div>;
 

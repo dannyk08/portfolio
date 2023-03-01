@@ -1,4 +1,5 @@
 import { Poppins } from '@next/font/google'
+import classNames from 'classnames';
 import { Props } from 'next/script';
 import styles from './Heading.module.scss'
 
@@ -26,15 +27,15 @@ export default function Heading(props: HeadingProps) {
 
   switch (size) {
     case 'h5':
-      return <h5 className={[className, poppins.className, styles[size]].join(' ')}>{children}</h5>
+      return <h5 className={classNames(className, poppins.className, styles[size])}>{children}</h5>
     case 'h4':
-      return <h4 className={[className, poppins.className, styles[size]].join(' ')}>{children}</h4>
+      return <h4 className={classNames(className, poppins.className, styles[size])}>{children}</h4>
     case 'h3':
-      return <h3 className={[className, poppins.className, styles[size]].join(' ')}>{children}</h3>
+      return <h3 className={classNames(className, poppins.className, styles[size])}>{children}</h3>
     case 'h2':
-      return <h2 className={[className, poppins.className, styles[size]].join(' ')}>{children}</h2>
+      return <h2 className={classNames(className, poppins.className, styles[size])}>{children}</h2>
 
     default:
-      return <h1 className={[className, poppins.className, styles[size]].join(' ')}>{children}</h1>
+      return <h1 className={classNames(className, poppins.className, styles[size])}>{children}</h1>
   }
 }

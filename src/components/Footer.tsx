@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import { Props } from 'next/script';
 import BaseElevation from './elevations/Base';
 import Base from './icons/Base';
 import Lead from './typography/Lead';
 import P from './typography/P';
 import styles from './Footer.module.scss'
 
-export default function Footer(props: Props) {
+export default function Footer() {
   return <BaseElevation>
     <footer>
       <ul className={styles.mainNav}>

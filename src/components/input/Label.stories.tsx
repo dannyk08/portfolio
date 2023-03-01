@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react';
 import Label from './Label';
 
 export default {
-  title: 'Components/Input',
+  title: 'Components/Input/Label',
   Component: Label,
   argTypes: {
     value: {
