@@ -125,7 +125,7 @@ export default function Contact() {
         <meta name="description" content="Contact Daniel (Danny) Romero Web Developer for your web projects." />
       </Head>
       <Page>
-        <Heading>Contact</Heading>
+        <Heading className={styles.heading}>Contact</Heading>
 
         <div className={styles.cardContainer}>
           <Card>

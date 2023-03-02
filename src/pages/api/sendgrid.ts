@@ -1,7 +1,10 @@
 import { Request, Response } from 'express'
 import sendgrid from '@sendgrid/mail'
 
-const { SENDGRID_API_KEY_FULL_ACCESS = '' } = process.env
+const {
+  RECIPIENT_EMAIL = '',
+  SENDGRID_API_KEY_FULL_ACCESS = ''
+} = process.env
 
 sendgrid.setApiKey(SENDGRID_API_KEY_FULL_ACCESS)
 
@@ -23,8 +26,8 @@ export default async function sendMail(req: Request, res: Response) {
 
   try {
     await sendgrid.send({
-      to: 'danny@dannys.io',
-      from: 'danny@dannys.io',
+      to: RECIPIENT_EMAIL,
+      from: RECIPIENT_EMAIL,
       subject: `[Lead from Danny's IO Form]: ${subject}`,
       html: `<!DOCTYPE html
       PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

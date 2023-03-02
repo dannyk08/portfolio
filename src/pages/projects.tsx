@@ -1,8 +1,8 @@
 import Heading from '@/components/typography/Heading';
 import Base from '@/components/icons/Base';
 import Head from 'next/head';
-import styles from './projects.module.scss'
 import Page from '@/components/layouts/Page';
+import styles from './projects.module.scss'
 
 export default function Projects() {
   return (
@@ -11,8 +11,8 @@ export default function Projects() {
         <title>Danny's IO | Daniel Romero projects page</title>
         <meta name="description" content="Daniel (Danny) Romero Web Developer projects collection." />
       </Head>
-      <Page className={styles.main}>
-        <Heading>Projects</Heading>
+      <Page>
+        <Heading className={styles.heading}>Projects</Heading>
         <Base iconName='wrench' />
       </Page>
     </>
