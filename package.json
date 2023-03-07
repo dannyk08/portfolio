@@ -11,6 +11,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.4.4",
     "@next/font": "13.1.6",
     "@sendgrid/mail": "^7.7.0",
     "@types/node": "18.14.0",

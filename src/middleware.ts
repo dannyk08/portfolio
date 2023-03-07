@@ -10,7 +10,6 @@ const isStagingMode = STAGE_MODE_ENV as any === 'staging'
 
 export const config = {
   matcher: '/:path*'
-  // matcher: '/'
 }
 
 export function middleware(req: NextRequest) {

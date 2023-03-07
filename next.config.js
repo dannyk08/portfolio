@@ -14,6 +14,9 @@ const nextConfig = {
     }
 
     return config
+  },
+  env: {
+    NEXT_PUBLIC_H_CAPTCHA_SITE_KEY: process.env.H_CAPTCHA_SITE_KEY,
   }
 }
 
