@@ -83,7 +83,12 @@ export default function Home() {
               <CTA />
             }
             <P>I'm Daniel Romero, a Frontend Web Developer based in Los Angeles, CA.</P>
-            <P>I've been developing, and maintaining, web applications using modern frameworks and practices for over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years.</P>
+            <P>As a frontend engineer with over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years of experience, I have honed my skills in creating and maintaining web applications using a variety of legacy and modern Javascript frameworks such as AngularJS, ReactJS, and VueJS. Throughout my career, I have mentored team members and optimized applications using best practices for scalability.</P>
+            <P>One of my proudest accomplishments was auditing a web application and improving Lighthouse performance scores by an average of 40 points. This optimization helped improve the user experience and increase engagement with the application.</P>
+            <P>I have also implemented fully tested serial cataloging algorithms that are now being used nationally and globally. This project required attention to detail and a deep understanding of the complexities of the algorithms.</P>
+            <P>I have a passion for streamlining processes and maximizing efficiency, which is why I took the initiative to unify styles and component functionalities from multiple applications into a UI component library. This library saved the team valuable time and resources, allowing us to focus on other important aspects of the projects.</P>
+            <P>In addition to my technical skills, I also enjoy collaborating with other departments to solve problems. For instance, I architected a landing page CMS for the Marketing team, which allowed them to launch campaigns in minutes. This project required effective communication and a deep understanding of the team's needs.</P>
+            <P>Overall, You should hire me 😬!</P>
           </div>
         </div>
       </Page>
