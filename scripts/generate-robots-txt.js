@@ -1,12 +1,12 @@
 const fs = require('fs')
 
-const { BUILD_MODE } = process.env
-const productionEnv = BUILD_MODE === 'production'
+const { STAGE_MODE_ENV } = process.env
+const isProdMode = STAGE_MODE_ENV === 'production'
 const crawlableRobotsTxt = `User-agent: *\nAllow: /`
 const unCrawlableRobotsTxt = `User-agent: *\nDisallow: /`
 
 function generateRobotsTxt() {
-  const robotsTxt = productionEnv ? crawlableRobotsTxt : unCrawlableRobotsTxt
+  const robotsTxt = isProdMode ? crawlableRobotsTxt : unCrawlableRobotsTxt
   fs.writeFileSync('public/robots.txt', robotsTxt)
 }
 
