@@ -121,7 +121,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Danny's IO | Daniel Romero contact page</title>
+        <title>Danny's IO | Contact</title>
         <meta name="description" content="Contact Daniel (Danny) Romero Web Developer for your web projects." />
       </Head>
       <Page>

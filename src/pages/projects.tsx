@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Danny's IO | Daniel Romero projects page</title>
+        <title>Danny's IO | Projects</title>
         <meta name="description" content="Daniel (Danny) Romero Web Developer projects collection." />
       </Head>
       <Page>
