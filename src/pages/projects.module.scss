@@ -1,3 +1,63 @@
+@import '@/styles/layout';
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .heading {
   text-align: center;
+}
+
+.description {
+  max-width: 45rem;
+
+  @media (min-width: $tablet-breakpoint-px) {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.cardLink {
+  display: inline-flex;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: var(--foreground-hex);
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin: 0;
+
+  @media (min-width: $tablet-breakpoint-px) {
+    flex-direction: row;
+  }
+}
+
+.mainCardContent {
+  margin-bottom: 1rem;
+
+  @media (min-width: $tablet-breakpoint-px) {
+    flex: 1;
+  }
+}
+
+.cardFooter {
+  @media (min-width: $tablet-breakpoint-px) {
+    width: 65%;
+  }
+}
+
+.imageCarousel {
+  display: flex;
+  overflow: auto;
+  align-items: center;
 }
