@@ -3,7 +3,7 @@ import BaseConfig from './Base.stories'
 
 import PrimaryButton from './Primary'
 
-export default {
+const config = {
   ...BaseConfig,
   title: 'Components/Button/Primary'
 }
@@ -17,3 +17,5 @@ const Template: ComponentStory<typeof PrimaryButton> = (args) => <div>
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export default config
