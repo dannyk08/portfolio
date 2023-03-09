@@ -1,7 +1,7 @@
 import { ComponentStory } from '@storybook/react';
 import Label from './Label';
 
-export default {
+const config = {
   title: 'Components/Input/Label',
   Component: Label,
   argTypes: {
@@ -19,3 +19,5 @@ const Template: ComponentStory<typeof Label> = (args) => <div>
 
 export const Base = Template.bind({});
 Base.args = {};
+
+export default config
