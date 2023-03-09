@@ -7,16 +7,20 @@ const poppins = Poppins({
   weight: '700',
 })
 
-const headingComponents = new Set([
+export const headings = [
   'h1',
   'h2',
   'h3',
   'h4',
   'h5',
-])
+] as const
+
+type Headings = typeof headings[number]
+
+const headingComponents = new Set(headings)
 
 type HeadingProps = Props & {
-  size?: string,
+  size?: Headings,
 }
 
 export default function Heading(props: HeadingProps) {

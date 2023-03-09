@@ -50,5 +50,4 @@ export default function Navbar() {
       </Modal>
     </nav>
   </BaseElevation>
-
 }

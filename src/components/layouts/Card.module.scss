@@ -2,7 +2,8 @@
 @import '@/styles/elevation';
 
 .card {
-  @include elevation;
+  @include elevation(var(--background-hex-light));
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -10,9 +11,15 @@
   max-width: 45rem;
   width: 100%;
   margin: 0;
+  transition: box-shadow .25s ease-out;
 
   @media (min-width: $tablet-breakpoint-px) {
     padding: 4rem 3rem;
     margin: 1rem;
   }
+}
+
+.cardInView {
+  box-shadow: $elevation-4;
+  transition: box-shadow .25s ease-in;
 }

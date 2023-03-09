@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Heading from './Heading';
+import Heading, { headings } from './Heading';
 
 export default {
   title: 'Components/Typography/Heading',
@@ -12,13 +12,7 @@ export default {
     size: {
       defaultValue: 'h1',
       control: 'select',
-      options: [
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-      ]
+      options: headings
     }
   }
 

@@ -1,7 +1,7 @@
 import { ComponentStory } from '@storybook/react';
 import BaseInput from './Base';
 
-export default {
+const config = {
   title: 'Components/Input/Base',
   Component: BaseInput,
   argTypes: {
@@ -41,3 +41,5 @@ export const TextArea = Template.bind({});
 TextArea.args = {
   entryType: 'textarea'
 };
+
+export default config
