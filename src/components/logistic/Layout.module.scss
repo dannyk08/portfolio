@@ -9,13 +9,13 @@
 }
 
 .home {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(-45deg,
       var(--background-hex-dark) 0%,
       var(--background-hex-dark) 50%,
       var(--background-hex) 50%,
       var(--background-hex) 100%);
 
-  @media (min-width: $mobile-breakpoint-px) {
+  @media (min-width: $desktop-breakpoint-px) {
     background: linear-gradient(to right,
         var(--background-hex-dark) 0%,
         var(--background-hex-dark) 50%,
