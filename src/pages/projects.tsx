@@ -21,10 +21,10 @@ export default function Projects() {
       </Head>
       <Page>
         <div className={styles.pageContainer}>
-          <Heading className={styles.heading}>Projects</Heading>
+          <Heading className={styles.heading}>Coding Challenges</Heading>
           <div className={styles.description}>
-            <P>Through the years, I've completed several coding challenges. This is a page showcasing them. These projects range from landing pages to simple applications, using JavaScript libraries and frameworks such as VueJS, ReactJS, Angular, NodeJS, and other technologies.</P>
-            <P>These are all unfinished works. These small samples of work were meant to showcase my skills as a web developer and my ability to create effective digital solutions.</P>
+            <P>Through the years, I've completed several coding challenges with potential employers to showcase my skills as a web developer and my ability to create effective digital solutions on a strict timeline.</P>
+            <P>These coding challenges have ranged from landing pages to simple applications demanding my expertise with JavaScript libraries and frameworks such as VueJS, ReactJS, Angular, NodeJS, and other technologies.</P>
           </div>
 
           <div className={styles.cards}>
@@ -33,7 +33,7 @@ export default function Projects() {
                 <Card key={project.url} className={styles.card}>
                   <div className={styles.mainCardContent}>
                     <CardLabel>
-                      <Heading size='h5' className={cardLabelStyles.cardLabelHeading}>
+                      <Heading size='h4' className={cardLabelStyles.cardLabelHeading}>
                         {project.heading}
                       </Heading>
                       <Lead>

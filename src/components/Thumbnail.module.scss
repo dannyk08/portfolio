@@ -7,11 +7,5 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: 26.5rem;
   min-width: 24rem;
-
-  @media (min-width: $tablet-breakpoint-px) {
-    padding: 1rem;
-    margin: 1rem;
-  }
 }
