@@ -18,6 +18,11 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 2rem;
+
+  @media (min-width: $desktop-breakpoint-px) {
+    padding-bottom: 0;
+  }
 }
 
 .thumbnailUserInfo {
