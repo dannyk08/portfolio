@@ -6,11 +6,19 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $tablet-breakpoint-px) {
+  @media (min-width: $desktop-breakpoint-px) {
     flex-direction: row;
+    gap: 4rem;
   }
 }
 
+.thumbnailContainer,
+.profileDesc {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .thumbnailUserInfo {
   width: 100%;
@@ -19,7 +27,7 @@
   align-items: center;
   text-align: center;
 
-  @media (min-width: $tablet-breakpoint-px) {
+  @media (min-width: $desktop-breakpoint-px) {
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
@@ -38,7 +46,7 @@
   justify-content: space-between;
   margin-bottom: 1rem;
 
-  @media (min-width: $tablet-breakpoint-px) {
+  @media (min-width: $desktop-breakpoint-px) {
     max-width: 20rem;
     padding-left: 0;
     padding-right: 0;
@@ -55,10 +63,9 @@
 }
 
 .profileDesc {
-  padding: 2rem 0 1rem;
   background: transparent;
 
-  @media (min-width: $tablet-breakpoint-px) {
+  @media (min-width: $desktop-breakpoint-px) {
     @include elevation(transparent);
     display: flex;
     flex-direction: column;

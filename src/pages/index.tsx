@@ -37,44 +37,46 @@ export default function Home() {
       </Head>
       <Page>
         <div className={styles.mainContent}>
-          <Thumbnail className={styles.thumbnail}>
-            <Container className={styles.thumbnailUserInfo}>
-              <Image
-                decoding='async'
-                loading='eager'
-                className={styles.thumbnailImage}
-                src='/images/daniel-romero-profile.jpg'
-                alt='Daniel Romero profile picture'
-                height={200} width={200} />
-              <Heading>Daniel <br /> Romero</Heading>
-              <Divider />
-              <Cap>Web Developer</Cap>
-            </Container>
-            {
-              size.isMobile &&
-              <CTA />
-            }
+          <div className={styles.thumbnailContainer}>
+            <Thumbnail>
+              <Container className={styles.thumbnailUserInfo}>
+                <Image
+                  decoding='async'
+                  loading='eager'
+                  className={styles.thumbnailImage}
+                  src='/images/daniel-romero-profile.jpg'
+                  alt='Daniel Romero profile picture'
+                  height={200} width={200} />
+                <Heading>Daniel <br /> Romero</Heading>
+                <Divider />
+                <Cap>Web Developer</Cap>
+              </Container>
+              {
+                size.isMobile &&
+                <CTA />
+              }
 
-            <ul className={styles.thumbnailIcons}>
-              <li>
-                <Link href="https://www.linkedin.com/in/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's LinkedIn">
-                  <Base iconName='linkedin' />
-                </Link>
-              </li>
+              <ul className={styles.thumbnailIcons}>
+                <li>
+                  <Link href="https://www.linkedin.com/in/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's LinkedIn">
+                    <Base iconName='linkedin' />
+                  </Link>
+                </li>
 
-              <li>
-                <Link href="https://github.com/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's GitHub">
-                  <Base iconName='github' />
-                </Link>
-              </li>
+                <li>
+                  <Link href="https://github.com/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's GitHub">
+                    <Base iconName='github' />
+                  </Link>
+                </li>
 
-              <li>
-                <Link href="https://calendly.com/dannyk08/conversation-daniel-romero/" target="_blank" aria-label="Schedule a time to chat with Daniel Romero on Calendly">
-                  <Base iconName='calendar' />
-                </Link>
-              </li>
-            </ul>
-          </Thumbnail>
+                <li>
+                  <Link href="https://calendly.com/dannyk08/conversation-daniel-romero/" target="_blank" aria-label="Schedule a time to chat with Daniel Romero on Calendly">
+                    <Base iconName='calendar' />
+                  </Link>
+                </li>
+              </ul>
+            </Thumbnail>
+          </div>
 
           <div className={styles.profileDesc}>
             <Display>Hello</Display>
@@ -82,13 +84,9 @@ export default function Home() {
               !size.isMobile &&
               <CTA />
             }
-            <P>I'm Daniel Romero, a Frontend Web Developer based in Los Angeles, CA.</P>
-            <P>As a frontend engineer with over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years of experience, I have honed my skills in creating and maintaining web applications using a variety of legacy and modern Javascript frameworks such as AngularJS, ReactJS, and VueJS. Throughout my career, I have mentored team members and optimized applications using best practices for scalability.</P>
-            <P>One of my proudest accomplishments was auditing a web application and improving Lighthouse performance scores by an average of 40 points. This optimization helped improve the user experience and increase engagement with the application.</P>
-            <P>I have also implemented fully tested serial cataloging algorithms that are now being used nationally and globally. This project required attention to detail and a deep understanding of the complexities of the algorithms.</P>
-            <P>I have a passion for streamlining processes and maximizing efficiency, which is why I took the initiative to unify styles and component functionalities from multiple applications into a UI component library. This library saved the team valuable time and resources, allowing us to focus on other important aspects of the projects.</P>
-            <P>In addition to my technical skills, I also enjoy collaborating with other departments to solve problems. For instance, I architected a landing page CMS for the Marketing team, which allowed them to launch campaigns in minutes. This project required effective communication and a deep understanding of the team's needs.</P>
-            <P>Overall, You should hire me 😬!</P>
+            <P>I am Daniel Romero, a frontend web developer based in Los Angeles, CA.</P>
+            <P>With over {new Date().getFullYear() - new Date('1/5/2015').getFullYear() - 1} years of experience, I have become proficient in creating and maintaining web applications using various Javascript frameworks such as VueJS, ReactJS, and Angular. I take pride in mentoring team members and optimizing applications using best practices for scalability. One of my greatest achievements at <a href='https://joinfightcamp.com/' target='_blank'>FightCamp</a> was improving Lighthouse performance scores by 40 points, significantly enhancing the user experience. At <a href='https://tlcdelivers.com/' target='_blank'>TLC</a>, I implemented fully tested serial cataloging algorithms, which are being utilized globally.</P>
+            <P>I have a passion for maximizing efficiency and streamlining processes, which is why I created a UI component library at <a href='https://www.internetbrands.com/our-brands/health' target='_blank'>Internet Brands' Health vertical</a> by unifying styles and component functionalities from multiple applications. Moreover, I enjoy collaborating with other departments to solve problems and designed a landing page CMS for the Marketing team at <a href='https://www.winc.com/' target='_blank'>Winc</a>, enabling them to launch campaigns in minutes.</P>
           </div>
         </div>
       </Page>
