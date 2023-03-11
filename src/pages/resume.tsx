@@ -25,7 +25,7 @@ export default function Home() {
           </Cap>
         </div>
 
-        <div>
+        <div className={styles.resumeContainer}>
           <iframe
             title='Daniel Romero most updated resume.'
             className={styles.resumeEmbed}
