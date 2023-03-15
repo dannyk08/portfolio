@@ -144,7 +144,6 @@ export default [
     heading: 'Guitar Center',
     subHeading: 'Coding Challenge',
     url: 'https://guitar-center-vanilla.web.app/',
-    // githubUrl: 'https://guitar-center-vanilla.web.app/',
     description: 'A landing page for Guitar Center that met all the requirements without using any modern frontend libraries. The challenge was to complete the task in a short amount of time. To achieve this, I utilized my skills in HTML, CSS, and vanilla JavaScript and JQuery to create an aesthetically pleasing and user-friendly landing page.',
     images: [
       {
