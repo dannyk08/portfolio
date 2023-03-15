@@ -5,7 +5,7 @@ import Head from 'next/head'
 import ReactModal from 'react-modal'
 import './_app.css';
 
-ReactModal.setAppElement('#modals')
+ReactModal.setAppElement('#__next')
 
 export default function App({ Component, pageProps }: AppProps) {
   return <>
@@ -15,7 +15,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
     <Layout>
       <Component {...pageProps} />
-      <div id="modals" />
     </Layout>
   </>
 
