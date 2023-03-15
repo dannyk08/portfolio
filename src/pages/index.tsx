@@ -7,7 +7,7 @@ import Primary from '@/components/buttons/Primary'
 import Secondary from '@/components/buttons/Secondary'
 import P from '@/components/typography/P'
 import Container from '@/components/layouts/Container'
-import Base from '@/components/icons/Base'
+import Base, { IconNames } from '@/components/icons/Base'
 import Link from 'next/link'
 import useWindowSize from '@/effects/useWindowSize'
 import Divider from '@/components/layouts/Divider'
@@ -60,19 +60,19 @@ export default function Home() {
               <ul className={styles.thumbnailIcons}>
                 <li>
                   <Link href="https://www.linkedin.com/in/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's LinkedIn">
-                    <Base iconName='linkedin' />
+                    <Base iconName={IconNames.linkedin} />
                   </Link>
                 </li>
 
                 <li>
                   <Link href="https://github.com/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's GitHub">
-                    <Base iconName='github' />
+                    <Base iconName={IconNames.github} />
                   </Link>
                 </li>
 
                 <li>
                   <Link href="https://calendly.com/dannyk08/conversation-daniel-romero/" target="_blank" aria-label="Schedule a time to chat with Daniel Romero on Calendly">
-                    <Base iconName='calendar' />
+                    <Base iconName={IconNames.calendar} />
                   </Link>
                 </li>
               </ul>

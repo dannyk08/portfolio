@@ -86,13 +86,13 @@ export default function Projects() {
                   <ButtonGroup>
                     {
                       project.githubUrl &&
-                      <Primary as='link' href={project.githubUrl}>
+                      <Primary as='link' href={project.githubUrl} aria-label='Navigate to project repository'>
                         <BaseIcon iconName={IconNames.github} inverse />
                       </Primary>
                     }
                     {
                       project.url &&
-                      <Secondary as='link' href={project.url}>
+                      <Secondary as='link' href={project.url} aria-label='Navigate to project url'>
                         <BaseIcon iconName={IconNames.share} />
                       </Secondary>
                     }

@@ -45,7 +45,9 @@ export default function Navbar() {
       <Modal active={size.isMobile && menuActive}>
         {
           size.isMobile &&
-          menuActive && <SubNavList />
+          menuActive && <ul className={styles.subNavList}>
+            <SubNavList />
+          </ul>
         }
       </Modal>
     </nav>
