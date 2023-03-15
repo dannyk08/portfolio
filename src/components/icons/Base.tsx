@@ -32,7 +32,8 @@ export default function Base(props: BaseIconProps) {
 
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
     <path
-      className={classNames(styles.path, {
+      className={classNames({
+        [styles.path]: !inverse,
         [styles.inversePath]: inverse,
       })}
       fill='#000000'

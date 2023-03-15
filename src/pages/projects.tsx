@@ -50,7 +50,6 @@ export default function Projects() {
 
               <Image
                 className={styles.modalImage}
-                key={modalImage.url}
                 src={modalImage.url}
                 alt={modalImage.alt}
                 height={modalImage.height * 2}
