@@ -42,6 +42,7 @@ export default function Home() {
             <Thumbnail>
               <Container className={styles.thumbnailUserInfo}>
                 <Image
+                  priority
                   decoding='async'
                   loading='eager'
                   className={styles.thumbnailImage}

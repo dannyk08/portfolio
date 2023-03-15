@@ -37,3 +37,4 @@ next-env.d.ts
 
 # build files
 public/robots.txt
+public/sitemap*.xml

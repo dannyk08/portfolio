@@ -7,6 +7,11 @@ export default function SubNavList() {
     <ul className={styles.subNavList}>
       <li>
         <Cap>
+          <Link href='/about'>About</Link>
+        </Cap>
+      </li>
+      <li>
+        <Cap>
           <Link href='/resume'>Resume</Link>
         </Cap>
       </li>
