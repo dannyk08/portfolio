@@ -13,9 +13,10 @@ import useWindowSize from '@/effects/useWindowSize'
 import Divider from '@/components/layouts/Divider'
 import Display from '@/components/typography/Display'
 import Page from '@/components/layouts/Page'
+import ButtonGroup from '@/components/buttons/Group.module'
 import styles from './index.module.scss'
 
-const CTA = () => <Container className={styles.thumbnailCta}>
+const CTA = () => <ButtonGroup className={styles.thumbnailCta}>
   <Primary as='link' href="/resume">
     RESUME
   </Primary>
@@ -23,7 +24,7 @@ const CTA = () => <Container className={styles.thumbnailCta}>
   <Secondary as='link' href="/projects">
     PROJECTS
   </Secondary>
-</Container>
+</ButtonGroup>
 
 
 export default function Home() {

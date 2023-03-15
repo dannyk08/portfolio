@@ -46,16 +46,7 @@
 }
 
 .thumbnailCta {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
   margin-bottom: 1rem;
-
-  @media (min-width: $desktop-breakpoint-px) {
-    max-width: 20rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .thumbnailIcons {

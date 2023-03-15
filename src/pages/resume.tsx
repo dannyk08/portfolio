@@ -1,4 +1,4 @@
-import Secondary from '@/components/buttons/Secondary';
+import Primary  from '@/components/buttons/Primary';
 import Page from '@/components/layouts/Page';
 import Cap from '@/components/typography/Cap';
 import Heading from '@/components/typography/Heading';
@@ -19,9 +19,9 @@ export default function Home() {
           </Heading>
 
           <Cap>
-            <Secondary as='link' href="https://docs.google.com/document/u/1/export?format=docx&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU">
+            <Primary as='link' href="https://docs.google.com/document/u/1/export?format=docx&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU">
               Download
-            </Secondary>
+            </Primary>
           </Cap>
         </div>
 

@@ -11,7 +11,7 @@
   box-shadow: $elevation-2;
   background: transparent;
   outline: none;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 2rem;
   cursor: pointer;
   transition: box-shadow .125s ease-out;

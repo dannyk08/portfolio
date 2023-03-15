@@ -12,6 +12,7 @@
   width: 100%;
   margin: 0;
   transition: box-shadow .25s ease-out;
+  overflow: hidden;
 
   @media (min-width: $tablet-breakpoint-px) {
     padding: 4rem 3rem;

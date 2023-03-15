@@ -8,6 +8,30 @@
   }
 }
 
+.imageModalContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  max-height: 75%;
+  padding: 1rem;
+}
+
+.imageModalClose {
+  position: absolute;
+  top: -4.5rem;
+}
+
+.modalImage {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .heading {
   text-align: center;
 }
@@ -21,16 +45,6 @@
   }
 }
 
-.cardLink {
-  display: inline-flex;
-  margin-bottom: 1rem;
-  max-width: 100%;
-
-  &:hover {
-    color: var(--foreground-hex);
-  }
-}
-
 .cards {
   @media (min-width: $tablet-breakpoint-px) {
     display: flex;
@@ -40,7 +54,9 @@
 }
 
 .card {
-  margin: 0;
+  display: inline-flex;
+  margin-bottom: 2rem;
+  max-width: 100%;
 
   @media (min-width: $tablet-breakpoint-px) {
     flex-direction: row;
@@ -56,15 +72,37 @@
 }
 
 .cardFooter {
+  background: var(--background-hex-dark);
+
   @media (min-width: $tablet-breakpoint-px) {
     width: 55%;
     margin-left: 1rem;
     margin-right: -3rem;
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 }
 
 .imageCarousel {
-  display: flex;
-  overflow: auto;
-  align-items: center;
+  :global .slider .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    img {
+      height: 20rem;
+      max-width: 100%;
+      width: auto;
+    }
+
+    @media (min-width: $tablet-breakpoint-px) {
+      img {
+        height: 25rem;
+      }
+    }
+  }
 }
