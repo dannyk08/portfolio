@@ -1,26 +1,27 @@
-interface ImageProjectDetails {
+export interface ImageProjectDetails {
   url: string,
   alt: string,
   height: number,
   width: number,
 }
 
-interface ProjectDetails {
+export interface ProjectDetails {
   heading: string,
   subHeading: string,
   url: string,
+  githubUrl: string,
   description: string,
   images: ImageProjectDetails[],
 }
 
-const DEFAULT_HEIGHT = 375
+const DEFAULT_WIDTH = 500
 const mobileRatio = 600 / 1146
 const desktopRatio = 1399 / 1025
 
 const getDimensions = (ratio: number) => {
   return {
-    width: Math.round(ratio * DEFAULT_HEIGHT),
-    height: DEFAULT_HEIGHT,
+    width: DEFAULT_WIDTH,
+    height: Math.round(DEFAULT_WIDTH / ratio),
   }
 }
 
@@ -32,6 +33,7 @@ export default [
     heading: 'CornerStone',
     subHeading: 'Coding Challenge',
     url: 'https://cornerstone-1b175.web.app/',
+    githubUrl: 'https://github.com/dannyk08/cornerstone',
     description: 'The Cornerstone team tasked me with a landing page designed to test my UI and styling skills as well as the resemblance to the mockups provided. The landing page is visually appealing and has a clean, modern design that is sure to capture the attention of visitors. The use of ReactJS and Webpack ensures that the app is fast and responsive, providing a seamless user experience.',
     images: [
       {
@@ -55,6 +57,7 @@ export default [
     heading: 'AnattaDesign',
     subHeading: 'Coding Challenge',
     url: 'https://anattadesign-9c9c7.web.app/',
+    githubUrl: 'https://github.com/dannyk08/anattadesign',
     description: 'AnattaDesign team provided a prompt where I had to build a hierarchical organization tool web application. The app was designed to help a company, called “The Boring” company, manage their employees efficiently. Built with VueJS, the app features a recursive component that displays a tree structure, allowing users to navigate the organizational chart.',
     images: [
       {
@@ -83,6 +86,7 @@ export default [
     heading: 'Ritual',
     subHeading: 'Coding Challenge',
     url: 'https://ember-ritual.web.app/',
+    githubUrl: 'https://github.com/dannyk08/ritual',
     description: 'The web app is an ingredient filtering tool designed to help users find and learn about ingredients. Built with EmberJS, the app challenged my ability to work with new tech. The app features a list of options that users can use to filter ingredients, making it easy to find specific ingredients. Users can also see detailed information on each ingredient, including nutritional value, recipes, and other useful information.',
     images: [
       {
@@ -111,6 +115,7 @@ export default [
     heading: 'Fab Fit Fun',
     subHeading: 'Coding Challenge',
     url: 'https://fff-profiles.web.app/',
+    githubUrl: 'https://github.com/dannyk08/fff',
     description: 'This web app is a dynamic carousel of profiles that was built with ReactJS. The challenge of this project was that the data was not provided, which required me to improvise and come up with creative solutions to achieve the desired outcome. When a user clicks on a colleague\'s profile image, the app inserts a profile into a long running carousel of profiles, providing the user with a unique and engaging experience.',
     images: [
       {
@@ -157,6 +162,7 @@ export default [
     heading: 'Sellbrite',
     subHeading: 'Coding Challenge',
     url: 'https://sellbrite-vue.web.app/shop',
+    githubUrl: 'https://github.com/dannyk08/fe-sample-project',
     description: 'An e-commerce web app using VueJS that challenged me to manage state between multiple routes and a cart component. The goal was to create an intuitive user experience where customers could easily add items to their cart and view their total cost. To achieve this, I utilized VueJS\'s reactive data bindings and computed properties to dynamically update the cart and total cost based on user interactions.',
     images: [
       {
@@ -205,6 +211,7 @@ export default [
     heading: 'Beauty Counter',
     subHeading: 'Coding Challenge',
     url: 'https://vue-beautycounter.web.app/landing-page',
+    githubUrl: 'https://github.com/dannyk08/beautycounter',
     description: 'The challenge consisted of two phases: first, I had to create a landing page that matched a design to the pixel, and second, I had to utilize an API of my choice to run queries and display the results. For the landing page, I carefully studied the provided design and used my skills in HTML, CSS, and JavaScript to create a responsive and visually stunning page. For the API challenge, the API is unavailable now.',
     images: [
       {

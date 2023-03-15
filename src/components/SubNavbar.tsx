@@ -3,7 +3,7 @@ import Cap from './typography/Cap';
 import styles from './SubNavbar.module.scss'
 
 export default function SubNavList() {
-  return <div className={styles.subNavbar}>
+  return <li className={styles.subNavbar}>
     <ul className={styles.subNavList}>
       <li>
         <Cap>
@@ -21,5 +21,5 @@ export default function SubNavList() {
         </Cap>
       </li>
     </ul>
-  </div>
+  </li>
 }
