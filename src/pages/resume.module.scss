@@ -4,7 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: auto auto 1rem;
+  max-width: 45rem;
+}
+
+.resumeContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .resumeEmbed {
@@ -14,5 +20,6 @@
 
   @media (min-width: $mobile-breakpoint-px) {
     height: 60rem;
+    max-width: 540pt;
   }
 }

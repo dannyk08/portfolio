@@ -3,8 +3,13 @@ import Cap from './typography/Cap';
 import styles from './SubNavbar.module.scss'
 
 export default function SubNavList() {
-  return <div className={styles.subNavbar}>
+  return <li className={styles.subNavbar}>
     <ul className={styles.subNavList}>
+      <li>
+        <Cap>
+          <Link href='/about'>About</Link>
+        </Cap>
+      </li>
       <li>
         <Cap>
           <Link href='/resume'>Resume</Link>
@@ -21,5 +26,5 @@ export default function SubNavList() {
         </Cap>
       </li>
     </ul>
-  </div>
+  </li>
 }

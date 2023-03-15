@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import BaseElevation from './elevations/Base';
-import Base from './icons/Base';
+import Base, { IconNames } from './icons/Base';
 import Lead from './typography/Lead';
 import P from './typography/P';
 import styles from './Footer.module.scss'
@@ -31,7 +31,7 @@ export default function Footer() {
                 <li>
                   <P>
                     <Link href="https://www.linkedin.com/in/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's LinkedIn">
-                      <Base iconName='linkedin' />
+                      <Base iconName={IconNames.linkedin} />
                     </Link>
                   </P>
                 </li>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li>
                   <P>
                     <Link href="https://github.com/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's GitHub">
-                      <Base iconName='github' />
+                      <Base iconName={IconNames.github} />
                     </Link>
                   </P>
                 </li>

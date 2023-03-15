@@ -7,15 +7,16 @@ import Primary from '@/components/buttons/Primary'
 import Secondary from '@/components/buttons/Secondary'
 import P from '@/components/typography/P'
 import Container from '@/components/layouts/Container'
-import Base from '@/components/icons/Base'
+import Base, { IconNames } from '@/components/icons/Base'
 import Link from 'next/link'
 import useWindowSize from '@/effects/useWindowSize'
 import Divider from '@/components/layouts/Divider'
 import Display from '@/components/typography/Display'
 import Page from '@/components/layouts/Page'
+import ButtonGroup from '@/components/buttons/Group.module'
 import styles from './index.module.scss'
 
-const CTA = () => <Container className={styles.thumbnailCta}>
+const CTA = () => <ButtonGroup className={styles.thumbnailCta}>
   <Primary as='link' href="/resume">
     RESUME
   </Primary>
@@ -23,7 +24,7 @@ const CTA = () => <Container className={styles.thumbnailCta}>
   <Secondary as='link' href="/projects">
     PROJECTS
   </Secondary>
-</Container>
+</ButtonGroup>
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
             <Thumbnail>
               <Container className={styles.thumbnailUserInfo}>
                 <Image
+                  priority
                   decoding='async'
                   loading='eager'
                   className={styles.thumbnailImage}
@@ -59,19 +61,19 @@ export default function Home() {
               <ul className={styles.thumbnailIcons}>
                 <li>
                   <Link href="https://www.linkedin.com/in/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's LinkedIn">
-                    <Base iconName='linkedin' />
+                    <Base iconName={IconNames.linkedin} />
                   </Link>
                 </li>
 
                 <li>
                   <Link href="https://github.com/dannyk08/" target="_blank" aria-label="Visit Daniel Romero's GitHub">
-                    <Base iconName='github' />
+                    <Base iconName={IconNames.github} />
                   </Link>
                 </li>
 
                 <li>
                   <Link href="https://calendly.com/dannyk08/conversation-daniel-romero/" target="_blank" aria-label="Schedule a time to chat with Daniel Romero on Calendly">
-                    <Base iconName='calendar' />
+                    <Base iconName={IconNames.calendar} />
                   </Link>
                 </li>
               </ul>
