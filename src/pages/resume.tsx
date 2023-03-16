@@ -1,4 +1,4 @@
-import Primary  from '@/components/buttons/Primary';
+import Primary from '@/components/buttons/Primary';
 import Page from '@/components/layouts/Page';
 import Cap from '@/components/typography/Cap';
 import Heading from '@/components/typography/Heading';
@@ -31,6 +31,7 @@ export default function Home() {
             className={styles.resumeEmbed}
             width={400}
             height={500}
+            loading='lazy'  
             src="https://docs.google.com/document/d/e/2PACX-1vTRyOZ1SxL9k6ka6TlgDjoGYRjOgEd2cNX8l4NOym-Hn53v_Kr_J6BFqKbKCD0c876VtdYyXt-rqQRy/pub?embedded=true"></iframe>
         </div>
       </Page>
