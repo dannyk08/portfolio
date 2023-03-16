@@ -5,4 +5,5 @@
   z-index: 2;
   width: 100vw;
   height: 100vh;
+  background: var(--box-shadow-1) !important;
 }

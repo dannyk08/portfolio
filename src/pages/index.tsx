@@ -48,7 +48,8 @@ export default function Home() {
                   className={styles.thumbnailImage}
                   src='/images/daniel-romero-profile.jpg'
                   alt='Daniel Romero profile picture'
-                  height={200} width={200} />
+                  height={200}
+                  width={200} />
                 <Heading>Daniel <br /> Romero</Heading>
                 <Divider />
                 <Cap>Web Developer</Cap>
