@@ -2,8 +2,8 @@ import Heading from '@/components/typography/Heading';
 import Head from 'next/head';
 import Page from '@/components/layouts/Page';
 import P from '@/components/typography/P';
-import workExperience, { } from '@/data/workExperience'
-import codingChallenges, { } from '@/data/codingChallenges';
+import workExperience from '@/data/workExperience'
+import codingChallenges from '@/data/codingChallenges';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import BaseIcon, { IconNames } from '@/components/icons/Base';
 import Primary from '@/components/buttons/Primary';
