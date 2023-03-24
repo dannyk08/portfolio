@@ -18,3 +18,9 @@ export interface ProjectDetails<T = ProjectDetail> {
   assets: T[],
   githubUrl?: string,
 }
+
+export interface Project {
+  projectType: string,
+  description: string[],
+  samples: ProjectDetails[]
+}
