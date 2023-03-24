@@ -11,7 +11,7 @@ import Lead from './typography/Lead'
 import P from './typography/P'
 import cardLabelStyles from '@/components/layouts/CardLabel.module.scss';
 import styles from './ProjectCard.module.scss'
-import Image from 'next/image'
+import ImageFallback from './ImageFallback'
 import { ReactNode } from 'react'
 import { ProjectAssetDetail, ProjectDetails, VideoProjectAssetDetail } from '@/data/types'
 
@@ -64,7 +64,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         showIndicators
         infiniteLoop>
         {
-          project.assets.map((image) => <Image
+          project.assets.map((image) => <ImageFallback
             style={{
               aspectRatio: `${image.width}/${image.height}`
             }}
