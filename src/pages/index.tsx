@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Heading from '@/components/typography/Heading'
 import Cap from '@/components/typography/Cap'
 import Thumbnail from '@/components/Thumbnail'
-import Image from 'next/image'
+import ImageFallback from '@/components/ImageFallback'
 import Primary from '@/components/buttons/Primary'
 import Secondary from '@/components/buttons/Secondary'
 import P from '@/components/typography/P'
@@ -41,7 +41,7 @@ export default function Home() {
           <div className={styles.thumbnailContainer}>
             <Thumbnail>
               <Container className={styles.thumbnailUserInfo}>
-                <Image
+                <ImageFallback
                   priority
                   decoding='async'
                   loading='eager'
