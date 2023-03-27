@@ -6,7 +6,7 @@ export interface ProjectAssetDetail {
 }
 
 export interface VideoProjectAssetDetail extends ProjectAssetDetail {
-  videoUrl: string,
+  videoUrls: string[],
 }
 
 export type ProjectDetail = ProjectAssetDetail & VideoProjectAssetDetail
