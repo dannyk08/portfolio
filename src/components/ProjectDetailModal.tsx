@@ -1,6 +1,5 @@
 import { ProjectDetail } from '@/data/types'
 import ImageFallback, { getDummyImage } from './ImageFallback'
-import ImageFallback, { getDummyImage } from './ImageFallback'
 import styles from './ProjectDetailModal.module.scss'
 
 interface ProjectDetailModalProps {
@@ -42,7 +41,6 @@ export default function ProjectDetailModal(props: ProjectDetailModalProps) {
   }
 
   if (projectDetail.url) {
-    return <ImageFallback
     return <ImageFallback
       className={styles.modalImage}
       style={{
