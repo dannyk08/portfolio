@@ -1,4 +1,4 @@
-import { Poppins } from '@next/font/google'
+import { Poppins } from 'next/font/google'
 import classNames from 'classnames';
 import { Props } from 'next/script';
 import styles from './Heading.module.scss'

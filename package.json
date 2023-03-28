@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.4.4",
-    "@next/font": "13.2.3",
     "@sendgrid/mail": "^7.7.0",
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",

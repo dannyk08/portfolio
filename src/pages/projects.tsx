@@ -41,8 +41,6 @@ export default function Projects(props: ProjectsProps) {
       <Head>
         <title>Danny's IO | Projects</title>
         <meta name="description" content="Daniel (Danny) Romero Web Developer projects collection." />
-        <link rel="preconnect" crossOrigin='anonymous' href="https://www.gstatic.com" />
-        <link rel="preconnect" crossOrigin='anonymous' href="https://lh3.googleusercontent.com" />
       </Head>
       <Page>
         <Modal
@@ -67,18 +65,18 @@ export default function Projects(props: ProjectsProps) {
           } />
 
         <div className={styles.pageContainer}>
-          <Heading className={styles.heading}>Projects</Heading>
+          <Heading className={styles.projectHeading}>Projects</Heading>
 
           {
-            projects.map((collection) => <div key={collection.projectType}>
-              <Heading size='h2' className={styles.heading}>{collection.projectType}</Heading>
-              <div className={styles.description}>
+            projects.map((collection) => <div className={styles.project} key={collection.projectType}>
+              <Heading size='h2' className={styles.projectHeading}>{collection.projectType}</Heading>
+              <div className={styles.projectDescription}>
                 {
                   collection.description.map((desc) => <P key={desc}>{desc}</P>)
                 }
               </div>
 
-              <div className={styles.cards}>
+              <div className={styles.projectCards}>
                 {
                   collection.samples.map(project => <ProjectCard
                     key={project.url}
@@ -86,6 +84,7 @@ export default function Projects(props: ProjectsProps) {
                       setModalAsset(project.assets[index])
                     }}
                     project={project}
+                    projectType={collection.projectType}
                   />)
                 }
               </div>

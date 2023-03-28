@@ -39,11 +39,15 @@
   align-items: center;
 }
 
-.heading {
+.project {
+  padding-top: 1.5rem;
+}
+
+.projectHeading {
   text-align: center;
 }
 
-.description {
+.projectDescription {
   max-width: 45rem;
   margin: auto;
 
@@ -53,7 +57,7 @@
   }
 }
 
-.cards {
+.projectCards {
   @media (min-width: $tablet-breakpoint-px) {
     display: flex;
     flex-direction: column;
