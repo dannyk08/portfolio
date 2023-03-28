@@ -26,7 +26,7 @@ export default function ProjectDetailModal(props: ProjectDetailModalProps) {
       autoPlay
       controls
       controlsList='nodownload noremoteplayback'
-      placeholder={getDummyImage(projectDetail)}
+      poster={getDummyImage(projectDetail)}
       title={projectDetail.alt}
       height={projectDetail.height}
       width={projectDetail.width}

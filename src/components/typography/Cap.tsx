@@ -1,4 +1,4 @@
-import { Poppins } from '@next/font/google'
+import { Poppins } from 'next/font/google'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './Cap.module.scss'
 

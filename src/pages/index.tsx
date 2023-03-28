@@ -46,7 +46,7 @@ export default function Home() {
                   decoding='async'
                   loading='eager'
                   className={styles.thumbnailImage}
-                  src='/images/daniel-romero-profile.jpg'
+                  src='https://firebasestorage.googleapis.com/v0/b/dannysio-portfolio.appspot.com/o/author%2Fdaniel-romero-profile.jpg?alt=media&token=9f1fda36-6967-446f-a3e1-06f131def797'
                   alt='Daniel Romero profile picture'
                   height={200}
                   width={200} />
