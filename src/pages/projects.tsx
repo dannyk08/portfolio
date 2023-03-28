@@ -10,6 +10,7 @@ import ProjectCard from '@/components/ProjectCard';
 import { Project, ProjectDetail } from '@/data/types';
 import ProjectDetailModal from '@/components/ProjectDetailModal';
 import { getProjects } from 'lib/projects';
+import Divider from '@/components/layouts/Divider';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from './projects.module.scss'
 
@@ -68,7 +69,8 @@ export default function Projects(props: ProjectsProps) {
           <Heading className={styles.projectHeading}>Projects</Heading>
 
           {
-            projects.map((collection) => <div className={styles.project} key={collection.projectType}>
+            projects.map((collection) => <div key={collection.projectType}>
+              <Divider enhanced />
               <Heading size='h2' className={styles.projectHeading}>{collection.projectType}</Heading>
               <div className={styles.projectDescription}>
                 {
