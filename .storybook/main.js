@@ -29,7 +29,7 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../')],
-      '@next/font/google': require.resolve('./nextFontGoogle')
+      'next/font/google': require.resolve('./nextFontGoogle')
     }
 
     config.resolve.roots = [
