@@ -1,4 +1,4 @@
-import { Poppins } from '@next/font/google';
+import { Poppins } from 'next/font/google';
 import classNames from 'classnames';
 import { DetailedHTMLProps, LabelHTMLAttributes } from 'react';
 import styles from './Label.module.scss'

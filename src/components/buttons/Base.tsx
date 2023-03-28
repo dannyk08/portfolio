@@ -1,4 +1,4 @@
-import { Poppins } from '@next/font/google';
+import { Poppins } from 'next/font/google';
 import classNames from 'classnames';
 import Link, { LinkProps } from 'next/link';
 import styles from './Base.module.scss'

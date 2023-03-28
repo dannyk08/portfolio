@@ -1,7 +1,5 @@
 @import '@/styles/layout';
 
-$labelColorHighlight: var(--secondary-color);
-
 .cardLabel {
   position: relative;
 
@@ -9,7 +7,7 @@ $labelColorHighlight: var(--secondary-color);
     content: " ";
     width: 0.5rem;
     height: 4rem;
-    background: $labelColorHighlight;
+    background: var(--secondary-color);
     display: flex;
     position: absolute;
     left: -1rem;
@@ -19,8 +17,4 @@ $labelColorHighlight: var(--secondary-color);
       left: -3rem;
     }
   }
-}
-
-.cardLabelHeading {
-  color: $labelColorHighlight;
 }
