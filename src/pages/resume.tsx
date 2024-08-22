@@ -19,7 +19,7 @@ export default function Home() {
           </Heading>
 
           <Cap>
-            <Primary as='link' href="https://docs.google.com/document/u/1/export?format=docx&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU">
+            <Primary as='link' href="https://docs.google.com/document/u/1/export?format=pdf&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU">
               Download
             </Primary>
           </Cap>
