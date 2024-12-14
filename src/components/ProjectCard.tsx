@@ -9,29 +9,27 @@ import CardLabel from './layouts/CardLabel'
 import Heading from './typography/Heading'
 import Lead from './typography/Lead'
 import P from './typography/P'
-import cardLabelStyles from '@/components/layouts/CardLabel.module.scss';
-import styles from './ProjectCard.module.scss'
 import ImageFallback from './ImageFallback'
 import { ReactNode } from 'react'
 import { ProjectAssetDetail, ProjectDetails, VideoProjectAssetDetail } from '@/data/types'
+import styles from './ProjectCard.module.scss'
 
 interface ProjectCardProps {
   project: ProjectDetails<ProjectAssetDetail | VideoProjectAssetDetail>
   onClickItem: (index: number, item: ReactNode) => void,
+  projectType: string,
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
-  const { project, onClickItem } = props
+  const { project, projectType, onClickItem } = props
 
   return <Card className={styles.card}>
     <div className={styles.mainCardContent}>
       <CardLabel>
-        <Heading size='h3' className={cardLabelStyles.cardLabelHeading}>
+        <Heading size='h3'>
           {project.heading}
         </Heading>
-        <Lead>
-          Coding Challenge
-        </Lead>
+        <Lead>{projectType}</Lead>
       </CardLabel>
 
       <div>
