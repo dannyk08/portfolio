@@ -19,7 +19,7 @@ export default function Home() {
           </Heading>
 
           <Cap>
-            <Primary as='link' href="https://docs.google.com/document/u/1/export?format=docx&id=1ddMOFSlmYsquur0cSmDVksMzlcsnnZOUzjBmBi7ZdCU">
+            <Primary as='link' href="https://docs.google.com/document/u/1/export?format=pdf&id=1HFm9DunwWoHGqJKxZTxb_HpoaxztjfFPLAbJRiHr-JE">
               Download
             </Primary>
           </Cap>
@@ -32,7 +32,7 @@ export default function Home() {
             width={400}
             height={500}
             loading='lazy'  
-            src="https://docs.google.com/document/d/e/2PACX-1vTRyOZ1SxL9k6ka6TlgDjoGYRjOgEd2cNX8l4NOym-Hn53v_Kr_J6BFqKbKCD0c876VtdYyXt-rqQRy/pub?embedded=true"></iframe>
+            src="https://docs.google.com/document/u/1/export?format=pdf&id=1HFm9DunwWoHGqJKxZTxb_HpoaxztjfFPLAbJRiHr-JE/view?embedded=true"></iframe>
         </div>
       </Page>
     </>
